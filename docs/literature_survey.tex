@@ -1,0 +1,1020 @@
+% ================== Document class ==================
+% Two-column layout, like a conference paper
+\documentclass[10pt,twocolumn]{article}
+
+% ================== Fonts and encoding ==================
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}              % Times font (text and math), as in most papers
+\usepackage{textcomp}
+\usepackage{microtype}
+
+% ================== Math ==================
+\usepackage{amsmath,amssymb}
+
+% ================== Page layout ==================
+\usepackage[letterpaper,margin=0.75in,columnsep=0.25in]{geometry}
+\setlength{\emergencystretch}{3em} % avoid overfull lines
+
+% ================== Tables ==================
+\usepackage{booktabs,array,tabularx}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\renewcommand{\arraystretch}{1.15}
+
+% ================== Sections ==================
+% Section numbers are written by hand (e.g. "4.1 ..."),
+% so automatic numbering is turned off.
+\setcounter{secnumdepth}{-\maxdimen}
+
+% ================== Links and colors ==================
+\usepackage[dvipsnames]{xcolor}
+\usepackage{xurl}
+\usepackage[unicode]{hyperref}
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Beyond Accuracy: How Weight-Only Quantization Changes the
+            Errors of Large Language Models in Reasoning and Factual Recall},
+  pdfauthor={Abbass Aoun},
+  colorlinks=true,
+  linkcolor=Maroon,
+  citecolor=Blue,
+  urlcolor=Blue
+}
+
+% ================== Title ==================
+\title{\Large\bfseries Beyond Accuracy: How Weight-Only Quantization Changes
+the Errors of Large Language Models in Reasoning and Factual Recall}
+
+\author{Abbass Aoun\\
+\small \href{mailto:abbass.aoun@lau.edu}{abbass.aoun@lau.edu}\\[4pt]
+\small COE 549: Advanced Large Language Models\\
+\small Instructor: Dr.~Samer Saab Jr.}
+
+\date{\small Submission date: November 3, 2026}
+
+\begin{document}
+
+% Title and abstract span both columns
+\twocolumn[
+\begin{@twocolumnfalse}
+\maketitle
+\begin{abstract}
+\noindent Quantization is now the standard way to make large language
+models (LLMs) small and cheap enough to run. There are many ways to do
+it: plain round-to-nearest (RTN), methods that correct rounding errors
+such as GPTQ, methods that protect the most important weights such as
+AWQ, and methods that deal with outliers in the activations. Almost all
+of them are judged the same way, by perplexity or by benchmark accuracy.
+Recent work shows that this hides a lot. A quantized model can keep the
+same accuracy while giving different answers to many questions, and some
+abilities suffer much more than others. Multi-step reasoning, rare facts,
+and answers the model was unsure about tend to break first, and they do
+not all break in the same way. In this survey, we organize the
+literature in two ways: by how each method handles rounding error, and
+by what each study actually measures. We then review what is known about
+reasoning, factual recall, changes in model behavior, failure modes, and
+the effect of calibration data. We find three gaps. Most studies measure
+\emph{how much} quality is lost, but few look at \emph{what kind} of
+mistakes appear. RTN is rarely kept as a baseline next to GPTQ. And
+reasoning and factual recall are almost never tested together in one
+controlled setup. These gaps motivate our project: a controlled study of
+the errors a small instruction-tuned model makes after being quantized
+with RTN and with GPTQ.
+\end{abstract}
+\vspace{1.5em}
+\end{@twocolumnfalse}
+]
+
+% ======================================================================
+\section{1. Introduction}
+
+Modern LLMs are expensive to run mainly because they are large. A
+175-billion-parameter model stored in 16-bit floating point needs about
+326~GB for its weights alone, far more than the 80~GB of a single
+high-end GPU, so even inference requires several accelerators [2].
+Quantization attacks this cost directly by storing each weight with
+fewer bits. Moving from 16 to 4 bits cuts weight memory by roughly four
+times, and because token-by-token generation is limited by how fast
+weights can be read from memory rather than by arithmetic, it can also
+make generation faster: GPTQ reports 3.25$\times$ to 4.5$\times$
+speedups for a 3-bit OPT-175B [2]. This is why 4-bit weights are an
+attractive choice for running open models on limited hardware: they give
+the best zero-shot accuracy per bit [6] and are among the most efficient
+formats for latency-sensitive serving [14].
+
+The question that matters for practitioners is not whether a quantized
+model is smaller, but whether it is still the same model. For most of
+the short history of LLM quantization, the answer has been read off two
+numbers: perplexity on a held-out corpus such as WikiText2, and average
+accuracy on a handful of zero-shot multiple-choice benchmarks [2], [6],
+[11]. When both stay close to the full-precision baseline, the quantized
+model is treated as a drop-in replacement. Several recent studies
+challenge that assumption. Dutta et al.~[26] show that compressed models
+often stay within one or two points of baseline accuracy while flipping
+up to 13.6\% of individual answers from correct to incorrect and back.
+Jaiswal et al.~[13] show that compression methods reported as nearly
+lossless in perplexity can still lose substantial accuracy on
+knowledge-intensive question answering. Studies of mathematical
+reasoning report losses that are much larger than on general
+benchmarks, especially for small models and hard problems [11], [15],
+[16], [18]. And interpretability work suggests that quantization fails
+through qualitatively different mechanisms at different bit widths [23].
+
+This survey takes that tension as its starting point. Its scope is
+post-training quantization (PTQ) of decoder-only LLMs, with an emphasis
+on weight-only quantization at 4 bits, which offers the best accuracy
+per bit [6] and efficient deployment [14], and at 3 bits, where quality
+starts to break down and most of the interesting failures appear [2],
+[6]. We cover the main method families, but our real focus is
+evaluation: what the literature has measured about the behavior of
+quantized models, which abilities degrade first, how errors have been
+characterized, and how the choice of calibration data shapes the result.
+We draw on foundational methods papers, large benchmarking studies, and
+a set of recent (2025 and 2026) papers that look beyond accuracy at
+reasoning traces, failure modes, and factual knowledge.
+
+The rest of the survey is organized as follows. Section~2 introduces the
+notation and concepts needed to read the literature. Section~3 proposes
+a taxonomy along two axes: how methods treat rounding error, and what
+studies evaluate. Section~4 reviews the literature thematically,
+comparing methods and findings rather than summarizing papers one at a
+time. Section~5 examines datasets, metrics, and evaluation practice.
+Section~6 discusses the main technical trade-offs. Section~7 identifies
+open gaps, and Section~8 explains how those gaps shape our own project.
+Section~9 concludes.
+
+% ======================================================================
+\section{2. Problem Formulation and Background}
+
+\subsection{2.1 Uniform quantization and the RTN baseline}
+
+A linear layer computes $Y = WX$, where $W$ is a weight matrix with
+$d_{\mathrm{row}}$ rows (output channels) and $d_{\mathrm{col}}$ columns
+(input channels), and $X$ holds the layer inputs. Uniform $b$-bit
+quantization replaces each weight with one of $2^b$ evenly spaced
+levels. For an asymmetric min-max grid, a group of weights with minimum
+$w_{\min}$ and maximum $w_{\max}$ gets a scale and a zero-point:
+\[
+s = \frac{w_{\max} - w_{\min}}{2^b - 1}, \qquad
+z = \mathrm{round}\!\left(-\frac{w_{\min}}{s}\right),
+\]
+\[
+q = \mathrm{clip}\!\left(\mathrm{round}\!\left(\frac{w}{s}\right) + z,\
+0,\ 2^b - 1\right), \qquad \hat{w} = s\,(q - z).
+\]
+
+How finely the scales are assigned matters as much as the number of
+bits. With a per-tensor grid, the whole matrix shares one scale. With a
+per-row (per-channel) grid, each output row gets its own scale. With a
+group-wise grid, every block of $g$ weights in a row (usually $g = 128$)
+gets its own scale and zero-point. Smaller groups give a closer fit but
+cost a little extra storage, about 0.15 extra bits per weight for
+$g = 128$ in GPTQ's setting [2].
+
+Round-to-nearest (RTN) is the simplest method: it moves each weight to
+the closest level on the grid, on its own, without looking at any data
+or at the other weights. RTN is how LLM.int8() quantizes the weights
+[1], and it is the standard baseline for large models in GPTQ [2] and in
+S.~Li et al.~[11].
+
+We use the common W/A/KV notation. W4A16 means 4-bit weights and 16-bit
+activations (only the weights are quantized), W8A8 means 8-bit weights
+and 8-bit activations, and KV4 means a 4-bit key-value cache. This
+survey focuses mostly on W4A16 and W3A16.
+
+\subsection{2.2 The layer-wise reconstruction objective}
+
+Most accurate PTQ methods quantize a model one layer at a time [2], [3].
+For each layer, they choose the quantized weights so that the layer's
+\emph{output} stays close to the original, rather than the weights
+themselves. This is measured on a small set of calibration inputs $X$:
+\[
+\hat{W} = \arg\min_{\hat{W}} \lVert WX - \hat{W}X \rVert_2^2 .
+\]
+For each row of $W$, this is a quadratic problem whose Hessian is
+$H = 2XX^{\top}$. $H$ depends only on the inputs. Its diagonal shows how
+large each input feature is, and its off-diagonal entries show which
+input features move together. The Optimal Brain Quantizer (OBQ) [3],
+which adapts the classic Optimal Brain Surgeon pruning method, uses
+$H^{-1}$ to quantize one weight at a time. After each step, it adjusts
+the weights that are not yet quantized so that they cancel the error
+just introduced. GPTQ [2] keeps this idea but makes it fast enough for
+models with hundreds of billions of parameters (Section~4.1).
+
+The key point is that RTN and GPTQ can use exactly the same grid [2].
+The only difference between them is whether rounding errors are
+corrected.
+
+\subsection{2.3 Outliers}
+
+Quantization error depends on how wide a range the grid has to cover.
+Dettmers et al.~[1] showed that once models reach about 6.7B parameters,
+a few hidden dimensions start carrying very large activation values in
+most layers and tokens. These outlier features stretch the quantization
+range, and 8-bit activation quantization breaks down unless they are
+handled separately.
+
+S.~Li et al.~[11] measure the same effect with kurtosis, which tells how
+many extreme values a distribution has. Weight kurtosis is moderate and
+goes down as models grow (from 13.2 in OPT-1.3B to 5.2 in OPT-66B).
+Activation kurtosis is much higher, in the hundreds or thousands, and it
+goes up with model size. At the input of the FFN down projection in
+LLaMA2-7B, it reaches about 154,000. This difference explains a pattern
+seen across the literature: as models grow, weight-only quantization
+gets easier, but activation quantization gets harder [11].
+
+\subsection{2.4 Calibration data}
+
+Methods that use data need a small calibration set to estimate $X$.
+GPTQ uses it to build $H$ [2], while AWQ [4] and SmoothQuant [5] use it
+to measure activation sizes. The usual setup, used by GPTQ and widely
+reused since, is 128 random pieces of 2,048 tokens each from the C4 web
+corpus [2]. This makes calibration a real design choice, not a small
+detail: the inputs GPTQ sees decide which weights it thinks can make up
+for the rounding errors of others. Section~4.5 looks at how much this
+choice matters.
+
+\subsection{2.5 Capability, distance, and flips}
+
+Following Dutta et al.~[26], we separate two kinds of metrics.
+Capability metrics, such as accuracy and perplexity, ask whether a model
+is good. Distance metrics ask whether a compressed model still behaves
+like the original. Examples are the KL divergence between the two
+models' output distributions, and the share of answers that switch
+between correct and incorrect. We call such a switch a \emph{flip}. In
+this survey we separate \emph{harmful flips} (correct to incorrect) from
+\emph{repair flips} (incorrect to correct). The two can balance out in
+the accuracy score, even when the model's behavior has changed a lot
+[26].
+
+% ======================================================================
+\section{3. A Taxonomy of the Literature}
+
+Quantization papers are usually grouped by method. For our questions,
+this hides an important split: papers that propose methods and papers
+that evaluate them use different terms and ask different questions. We
+therefore group the literature along two axes. The first groups methods
+by how they handle rounding error (Table~\ref{tab:axisA}). The second
+groups studies by what they actually measure (Table~\ref{tab:axisB}),
+and this second axis turns out to be the more useful one.
+
+\begin{table*}[t]
+\centering
+\small
+\caption{Axis A: method families grouped by how they handle rounding
+error.}
+\label{tab:axisA}
+\begin{tabularx}{\textwidth}{@{}p{0.15\textwidth} L p{0.27\textwidth} p{0.13\textwidth}@{}}
+\toprule
+\textbf{Family} & \textbf{Main idea} & \textbf{Methods} &
+\textbf{Calibration data} \\
+\midrule
+Round-to-nearest & Each weight is rounded to the nearest grid level,
+independently of the others & RTN; LLM.int8() weights [1]; [6] & Not
+needed \\
+Error compensation & After rounding some weights, the remaining ones are
+updated to reduce the layer's output error, usually with second-order
+information & OBQ [3], GPTQ [2], QEP [7] & Needed \\
+Salience-aware scaling & Weight channels with large activations are
+scaled up before rounding so they lose less precision & AWQ [4] &
+Needed \\
+Difficulty migration & Activation outliers are moved into the weights
+with a per-channel scale that keeps the output unchanged & SmoothQuant
+[5] & Needed \\
+Rotation & Weights and activations are multiplied by orthogonal matrices
+that spread outliers across channels & QuaRot, SpinQuant (see [8], [9]);
+OneRot [8]; SpinOut [9]; DuQuant for TTS [10] & Only for learned
+rotations \\
+Mixed precision & The few outlier dimensions are kept in 16-bit while
+the rest is quantized & LLM.int8() decomposition [1] & Not needed \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\begin{table*}[t]
+\centering
+\small
+\caption{Axis B: studies grouped by what they measure, from the
+shallowest level (1) to the deepest (5).}
+\label{tab:axisB}
+\begin{tabularx}{\textwidth}{@{}p{0.2\textwidth} L p{0.38\textwidth}@{}}
+\toprule
+\textbf{Level} & \textbf{What is measured} & \textbf{Representative
+work} \\
+\midrule
+1. Language-modelling fit & Perplexity on WikiText2, C4, PTB & GPTQ [2],
+QEP [7], most methods papers \\
+2. Aggregate capability & Accuracy on zero-shot or multiple-choice
+benchmarks, sometimes generative ones & S.~Li et al.~[11], Lee et
+al.~[12], Kurtić et al.~[14], Dettmers and Zettlemoyer [6], Zhou et
+al.~[25] \\
+3. Targeted capability & Accuracy on one ability under controlled
+conditions (math, factual recall, emergent abilities, calibration
+domains) & Li et al.~[15], [16], P.~Liu et al.~[17], R.~Liu et
+al.~[18], Jaiswal et al.~[13], Williams and Aletras [28], Y.~Liu et
+al.~[29] \\
+4. Behavioral distance & How far the quantized model's answers drift
+from the baseline, regardless of accuracy & Dutta et al.~[26], Rababah
+et al.~[27], output similarity in [14] \\
+5. Mechanism and failure mode & Why examples fail, which components
+break, what the failures look like & Wang et al.~[22], Zhou et al.~[23],
+Chang et al.~[24], Lotfi et al.~[19], Lian et al.~[20], Alimaskina et
+al.~[21] \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\subsection{3.1 Axis A: how a method handles rounding error}
+
+Table~\ref{tab:axisA} groups the main method families. The first two
+rows matter most for this survey. RTN and GPTQ can use exactly the same
+grid, so comparing them tests one design choice: whether rounding errors
+are left to add up or are actively cancelled. The other families mostly
+target activation quantization, or use a different idea of which
+weights matter.
+
+\subsection{3.2 Axis B: what a study measures}
+
+Table~\ref{tab:axisB} groups studies by how deep their evaluation goes.
+Two points follow from it. First, most methods papers stop at levels 1
+and 2, so when a method is called ``near-lossless'', this usually means
+near-lossless in perplexity or multiple-choice accuracy. Second, the
+studies that reach levels 4 and 5 rarely compare RTN and GPTQ under the
+same setup (Lian et al.~[20] is an exception), and they usually study
+either reasoning or factual knowledge, almost never both. The rest of
+this survey is organized around these two points.
+
+% ======================================================================
+\section{4. Thematic Review of Prior Work}
+
+\subsection{4.1 From independent rounding to error compensation}
+
+The simplest method, RTN, works well at 8 bits. LLM.int8() [1] showed
+that 8-bit weights rounded to nearest, together with careful handling of
+activation outliers, lose no accuracy up to 175B parameters. Below 8
+bits, things change. With 4-bit RTN, the WikiText2 perplexity of
+OPT-175B rises from 8.34 to 10.54, which is worse than the 10$\times$
+smaller full-precision OPT-13B. At 3 bits, RTN collapses to perplexities
+in the thousands [2]. The reason is simple: RTN treats every weight on
+its own, so rounding errors that point in the same direction just add up
+in the layer output.
+
+Error-compensating methods tackle this directly. OBQ [3] solved the
+layer-wise problem of Section~2.2 almost exactly: it quantizes one
+weight at a time, always picking the easiest one next, and updates the
+remaining weights after each step. It matched the best post-training
+methods of its time at 4 and 3 bits on ResNets. But its cost grows as
+$O(d_{\mathrm{row}} \cdot d_{\mathrm{col}}^{3})$, which already meant
+about an hour for a 25M-parameter ResNet-50. GPTQ [2] made three changes
+that are each simple but together decisive. First, it quantizes columns
+in one fixed order shared by all rows, so $H^{-1}$ is updated once per
+column instead of once per weight. Second, it groups updates into blocks
+of 128 columns, so it is not slowed down by memory bandwidth. Third, it
+computes the needed rows of $H^{-1}$ in advance with a Cholesky
+decomposition and 1\% dampening, which removes the numerical problems
+that otherwise appear in billion-parameter layers. As a result, OPT-175B
+can be quantized in about four GPU hours, with 4-bit perplexity almost
+unchanged (8.34 to 8.37) and 3-bit perplexity still usable (8.68). The
+fixed order is the interesting choice. GPTQ shows that OBQ's careful
+ordering gains little on large layers: the weights with large errors
+that it saves for last find few weights left to absorb their error.
+
+Two results complicate the simple story that compensation always wins.
+Dettmers and Zettlemoyer [6] ran more than 35,000 experiments with
+quantization that uses no data. They found that 4-bit RTN-style
+quantization with small blocks already gives the best accuracy per bit
+on zero-shot tasks, and that block size and data type matter more than
+most other tricks. So RTN with groups of 128 is a serious baseline, not
+a straw man. Arai and Ichikawa [7] went further. In their per-channel
+experiments, 4-bit GPTQ failed badly on Llama-3-8B (WikiText2
+perplexity 147.9, against 8.54 for RTN), although it helped on most
+other models. They also argue that layer-wise methods, including GPTQ,
+ignore the error that builds up across layers. Their QEP correction
+improves nearly every method they test (RTN, GPTQ, AWQ and QuIP), most
+clearly at 2 bits. GPTQ partly addresses this by feeding each block the
+outputs of blocks that are already quantized [2], but QEP shows that the
+remaining error between layers is still large enough to matter.
+
+The other method families start from a different idea of what goes
+wrong. AWQ [4] argues that only about 1\% of weight channels are
+salient, that these are best found by activation size rather than
+weight size, and that scaling them up before rounding protects them
+without any second-order correction. It reports better results than RTN
+and similar or better results than GPTQ at 3 and 4 bits, and claims to
+overfit less to the calibration data. Independent comparisons disagree
+on which is better. Lee et al.~[12] find AWQ generally ahead of GPTQ at
+4 bits on instruction-tuned models, while Kurtić et al.~[14] find GPTQ
+ahead on real-world tasks, using MSE-optimal clipping and better
+calibration data. This disagreement is useful in itself: rankings
+between 4-bit methods depend on implementation details and evaluation
+choices, so claims that one method is better should be read with care.
+
+Activation quantization has its own line of work. LLM.int8() [1] keeps
+the outlier dimensions in FP16, which preserves accuracy but gives no
+speedup on small models. SmoothQuant [5] instead divides each activation
+channel by a smoothing factor and multiplies the matching weights by the
+same factor, so both become easy to quantize in INT8. It matches FP16
+accuracy up to 530B parameters, with up to 1.56$\times$ speedup.
+Rotation-based methods push this idea to 4-bit weights, activations and
+KV cache: they multiply tensors by orthogonal matrices that spread
+outliers across channels. Park et al.~[8] show that random rotations
+(QuaRot) give results that vary noticeably between random seeds, and
+that learning the rotation from a single perturbed sample (OneRot)
+matches SpinQuant, which uses 800 samples, while reducing that variance.
+Their journal extension, SpinOut [9], injects outliers only into the
+layers ranked most sensitive and improves W4A4KV4 perplexity further.
+Li [10] applies DuQuant-style rotation to the language model inside a
+text-to-speech system. Under W4A8 quantization, speaker similarity and
+perceived quality stay the same, but the character error rate rises: a
+model can sound fine while saying the wrong thing. These families matter
+for the wider picture, but because they target activations, their
+evaluations rarely isolate what weight rounding alone does to a model's
+answers.
+
+\subsection{4.2 What quantization does to reasoning}
+
+Across studies, multi-step reasoning is the most fragile ability.
+S.~Li et al.~[11], in an evaluation of eleven model families, find
+multi-step reasoning, especially math, among the most sensitive emergent
+abilities. Zhou et al.~[25] fit task-stratified scaling laws over 293
+GPTQ configurations of Qwen3 and Llama-3. They call reasoning
+``precision-critical'': it is the ability most sensitive to bit width,
+by about 40\% compared with the others, which they explain by errors
+adding up across reasoning steps.
+
+How large the effect is depends strongly on model size and task
+difficulty. P.~Liu et al.~[17] find that 4-bit GPTQ keeps in-context
+learning, chain-of-thought and instruction following on LLaMA models
+from 7B to 65B, while 2-bit models collapse. Their GSM8K scores barely
+change at 4 bits (13.1 to 13.5 for LLaMA-7B), but the full-precision
+scores are so low that there is little to lose. This floor effect hides
+small reasoning losses. Studies with stronger instruction-tuned models
+see much more. Lee et al.~[12] report that GPTQ drops Llama-3.2-1B from
+33.36 to 8.04 on GSM8K, while models of 70B and above barely change.
+Li et al.~find that 4-bit AWQ and GPTQ cost Llama-3 models up to about
+32\% relative accuracy on MATH, for the 1B model [15], and, in the
+expanded study, that GPTQ lowers Qwen2.5-1.5B on GSM8K from 68.23 to
+59.89 [16]. For long chain-of-thought reasoning models, R.~Liu et
+al.~[18] find W8A8 almost lossless and 4-bit weights ``nearly
+lossless'' (for example, a 2.1\% drop for AWQ on the 1.5B and 7B
+models). However, losses grow sharply at lower bit widths, are
+concentrated in the smaller models, and are up to about four times
+larger on AIME than on GSM8K. The common thread is that quantization
+hurts most for small models and hard, long problems, which is exactly
+where the average benchmarks used by methods papers say the least.
+
+Which kinds of errors appear is less clear. Li et al.~[15] label each
+wrong answer by its first wrong step, using a judge model, a vote among
+five LLMs and a human check of 2\% of cases. They sort errors into
+conceptual, method, execution and reasoning errors. Conceptual errors
+remain the largest group after quantization, and execution errors come
+second. Multiplication is especially affected. Reasoning errors look
+rare, but the authors explain this as a survivor effect: only the first
+error is counted, and quantized models fail early. S.~Li et al.~[11], in
+a small analysis of LLaMA2-70B, instead find wrong logic behind about
+half of the math errors. The two analyses differ in model size, bit
+width and categories, so they cannot be compared directly. Together,
+they show that the answer depends on the setting, and that a controlled
+comparison is missing. P.~Liu et al.'s case study [17] adds a
+qualitative contrast: at 4 bits the model writes a fluent solution with
+one wrong step, while at 2 bits its text is no longer a solution at all.
+
+The newest work on reasoning models looks at the reasoning trace
+itself. Lotfi et al.~[19] find that the main failure under aggressive
+quantization is overthinking: the model reaches the correct answer
+midway but does not commit to it. On MATH-500 with 3-bit AWQ, such
+errors rise from 19 to 139 and make up 52\% of failures. Notably, the
+per-token difference between the quantized and full-precision outputs
+follows the full-precision model's next-token entropy ($\rho = 0.92$):
+quantization noise does its damage where the original model was already
+unsure. Lian et al.~[20] show that quantized reasoning models often keep
+their accuracy but write much longer reasoning. At INT4 on Qwen3-4B,
+reasoning grows by 12\% with GPTQ but by 42.5\% with RTN, and at INT3 by
+276\% with AWQ and 292\% with HQQ, enough to cancel the expected
+speedup. Alimaskina et al.~[21], working at 2 bits, describe
+path-finding failures, where the trace loops before any answer appears,
+and commitment failures, where an answer appears but the model keeps
+checking it. They find that the loop rate predicts accuracy loss
+($r = -0.85$). These studies agree that quantization changes how a
+model reasons, not only whether it ends with the right number. Lian et
+al.~also give one of the few direct RTN-versus-GPTQ comparisons in this
+literature.
+
+\subsection{4.3 What quantization does to factual knowledge}
+
+Factual recall behaves differently from reasoning, and studies disagree
+on how much it suffers. Studies that report average scores tend to find
+small losses. Wang et al.~[22] test Llama3-8B, Qwen2.5-7B and
+Qwen2.5-14B on the LRE fact-probing dataset. On Qwen, 4-bit methods
+reduce recall by about 2.5 to 3 points, while 8-bit is almost lossless,
+and the authors conclude that quantization is still practical for
+knowledge-heavy use. Dutta et al.~[26] see only 2--4\% flips on
+TriviaQA, against 12--30\% on GSM8K, for large models compressed mainly
+with bitsandbytes. Other studies see much larger effects. Jaiswal et
+al.~[13] report that even 8-bit GPTQ loses about 8--10\% on exact-match
+factoid QA (FreebaseQA) for Vicuna models, while the same models look
+much healthier on multiple-choice MMLU, because picking one of four
+options is much easier than generating the exact entity. Their open-book
+experiments add a useful distinction: when the needed knowledge is given
+in the prompt, compressed models still retrieve and summarize well. So
+what compression mainly damages is the knowledge stored in the weights.
+
+The more interesting results are about which facts are lost, and how.
+Wang et al.~[22] find that relations where the full-precision model is
+not already near-perfect lose the most, so partly learned knowledge is
+the most fragile. Their neuron-attribution analysis places the loss in
+the last layers for Qwen and in the middle-to-late layers for Llama. In
+two-hop questions, the first hop (recalling the bridge entity) drops by
+up to 30.08\%, while the second hop drops by only 4.25\% on average.
+Chang et al.~[24] show that the same inputs are hard for GPTQ, AWQ,
+NormalFloat and EfficientQAT alike (average correlation 0.82 across 50
+method pairs). Examples with small residual-stream values in late layers
+suffer most, because errors built up across layers are amplified there.
+On PopQA, mid-popularity entities lose more than 10\%, while very famous
+and very obscure ones are hurt less. Zhou et al.~[23] give the clearest
+picture of what the failures look like. At 4 bits, the correct answer
+usually drops in rank but stays in the top five: this is signal
+degradation, where the computation still works but is noisy. At 2 bits,
+its rank falls into the thousands and the model outputs common tokens
+such as ``the'': this is computation collapse, where key components
+stop working. Patching in activations from the full-precision model
+fixes the first failure but not the second.
+
+Two features of this literature limit what we can conclude. First, most
+factual studies use probing formats (fill-in-the-blank prompts scored by
+the next token) instead of open questions answered in free text. This
+suits interpretability, but it hides what an error looks like in
+practice. Second, the results are inconsistent across models. Wang et
+al.~report that 4-bit GPTQ collapses Qwen2.5-14B from 73.1\% to 25.2\%
+while leaving the 7B model mostly intact, and that quantization
+sometimes improves recall [22]. Because they use pre-quantized public
+checkpoints, differences in calibration data and settings cannot be
+ruled out as causes. Zhou et al.~[25] add one more hint: in their
+scaling laws, memorization is about twice as sensitive to the size of
+the calibration set as application tasks are. This suggests that
+factual recall may depend on calibration choices more than average
+scores show.
+
+\subsection{4.4 Beyond accuracy: flips, distances and failure modes}
+
+A separate line of work argues that accuracy is the wrong thing to look
+at. Dutta et al.~[26] make this case most directly. Across six
+quantization schemes and seven multiple-choice tasks, accuracy stays
+within about 2\%, while flips reach 13.6\%; only 8-bit GPTQ keeps flips
+negligible. Flips increase with lower bit widths, harder tasks and
+smaller models, and they correlate strongly with the KL divergence
+between output distributions (Spearman 0.981 on MMLU). Their explanation
+of why flips balance out is useful. The answers that change are those
+with a small top margin (the gap between the best and second-best
+option). Wrong answers tend to have smaller margins, so they change more
+often (for 4-bit GPTQ on Llama2-7B, 15.3\% of wrong answers changed,
+against 9.3\% of correct ones). Rababah et al.~[27] reach a similar
+conclusion with a different measure, correctness agreement, which is
+always below accuracy and falls as precision drops. Kurtić et al.~[14]
+compare the free-text outputs of quantized 70B and 405B models with the
+BF16 outputs. They find an average ROUGE-L of about 0.56 but a
+BERTScore of 0.93: the wording often changes even when the meaning stays
+close. Perplexity hides the same effect. Dutta et al.~show that
+quantization acts like roughly symmetric noise on token
+log-probabilities, which leaves perplexity almost unchanged while
+generation quality gets worse.
+
+Distance metrics tell us that behavior changed, but, as Dutta et
+al.~note, a flip is ``only a warning''. To know what changed, we need
+failure modes. Here the literature offers several taxonomies, each tied
+to one task: first-error categories for math solutions [15], signal
+degradation versus computation collapse for factual recall [23],
+overthinking for reasoning models [19], path-finding failures,
+commitment failures and loops at 2 bits [21], and token inflation [20].
+These taxonomies are valuable, but they cannot be compared with each
+other: each was built for one type of task, mostly with one quantization
+method, and none is applied to reasoning and factual recall side by
+side. The flips literature, meanwhile, counts changes but does not
+classify them, apart from a qualitative look at around ten MT-Bench
+answers in [26].
+
+\subsection{4.5 The role of calibration data}
+
+If GPTQ corrects errors based on the statistics of its calibration
+inputs, then the choice of calibration data should matter. The evidence
+suggests that it matters little for general benchmarks at 4 bits, but a
+lot for specialized tasks at 3 bits. Williams and Aletras [28], in the
+most systematic study, compress LLaMA, Vicuna and OPT models with GPTQ,
+SpQR, SparseGPT and Wanda, using five calibration sources and ten random
+sets from each. Pruning turns out to be sensitive, but 4-bit GPTQ
+changes by only about 0.1 to 0.4 points in average accuracy between
+sources, and using more than about 128 calibration examples brings
+little extra gain. Y.~Liu et al.~[29] test whether calibration data from
+the same distribution as the test set helps, and conclude that it is
+``not necessarily optimal'': the best calibration source depends on the
+dataset and the method, although same-distribution data usually helped
+in their Chinese cross-dataset tests.
+
+The picture changes for low bits and specialized domains. R.~Liu et
+al.~[18] calibrate 3-bit GPTQ on a 1.5B reasoning model with either
+WikiText2 or self-generated math reasoning data. Math calibration raises
+average accuracy from 28.3 to 38.1, and GSM8K from 57.5 to 75.7. Lian et
+al.~[20] report that math chain-of-thought calibration raised INT3
+accuracy from 28\% to 65\% and cut reasoning length from about 30k to
+12k tokens. Arai and Ichikawa [7] find that GPTQ calibrated on PTB did
+worse than plain RTN on WikiText2, and Kurtić et al.~[14] report that
+calibrating 4-bit GPTQ on random tokens hurts accuracy. AWQ, which uses
+calibration data only to measure activation sizes, is claimed to be less
+prone to this kind of overfitting [4].
+
+What these studies have not asked is what domain-specific calibration
+costs elsewhere. Every experiment that shows math calibration helping
+math reasoning measures math reasoning only. None checks whether the
+same model gets worse at recalling facts, and none checks whether
+calibration changes the kind of errors that remain.
+
+% ======================================================================
+\section{5. Datasets, Benchmarks and Evaluation Protocols}
+
+The benchmarks used in the reviewed work fall into a few families
+(Table~\ref{tab:bench}), and the family a study chooses largely decides
+what it can find.
+
+\begin{table*}[t]
+\centering
+\small
+\caption{Benchmark families used in the reviewed literature.}
+\label{tab:bench}
+\begin{tabularx}{\textwidth}{@{}p{0.17\textwidth} L p{0.22\textwidth} p{0.2\textwidth}@{}}
+\toprule
+\textbf{Family} & \textbf{Typical datasets} & \textbf{Main metric} &
+\textbf{Used in} \\
+\midrule
+Language modelling & WikiText2, C4, PTB & Perplexity & [2], [7]--[9],
+[27], [28] \\
+Multiple-choice and zero-shot & MMLU, ARC, PIQA, HellaSwag, Winogrande,
+LAMBADA, StoryCloze & Accuracy (option log-likelihood, sometimes
+length-normalized) & [2], [6]--[8], [11], [12], [26]--[28] \\
+Generative reasoning (mostly math) & GSM8K, MATH / MATH-500, AIME, GPQA,
+BBH & Exact match on the final answer & [12], [14]--[21], [25], [26] \\
+Factual recall & TriviaQA, FreebaseQA, PopQA, Natural Questions, LRE,
+TwoHop-Fact, ParaRel; TruthfulQA (truthfulness) & Exact match or
+next-token accuracy & [12]--[14], [22]--[26] \\
+Open-ended generation & MT-Bench, Arena-Hard & LLM-judge scores,
+similarity to the baseline output & [12], [14], [26] \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+The usual baselines are the 16-bit model and, in methods papers, RTN on
+the same grid [2]. A clear trend in recent evaluation studies is that
+RTN disappears. The analyses of reasoning errors [15], factual recall
+[22], failure modes [23] and overthinking [19] compare GPTQ, AWQ or
+other methods with each other and with full precision, but not with RTN.
+This matters because RTN is the only baseline that isolates the effect
+of error compensation.
+
+Several weaknesses come up again and again in this literature. First,
+perplexity and multiple-choice accuracy miss the damage that matters for
+generation [13], [26]: scoring only the first generated token cannot
+reveal a wrong calculation or an answer that names a nearby but wrong
+entity. Second, weak baselines create floor effects. When a
+full-precision model solves only 13\% of GSM8K, as in [17], a 4-bit
+model has little room to lose, and the study will conclude that
+reasoning is robust. Third, samples are sometimes small. Lian et al.~[20]
+use around 100 questions per benchmark, and the qualitative analysis in
+[26] looks at about ten MT-Bench answers. This is enough to show a
+trend, but not to compare fine-grained categories. Fourth, LLM judges
+make their own mistakes. Lee et al.~[12] note that GPT-4 sometimes
+graded wrong MT-Bench answers as correct, and Li et al.~[15] report a
+judge treating ``5.5'' and ``11/2'' inconsistently. Without answer
+normalization and a human check, some reported ``flips'' are not real
+errors at all.
+
+Finally, several studies change the model or the quantization pipeline
+in ways that blur the comparison. Wang et al.~[22] use public
+pre-quantized checkpoints, so calibration data and settings differ
+between methods and models. Li et al.~[15] fine-tune every model for
+output format before evaluation. This makes step-level analysis
+possible, but it means the tested models are no longer the original
+ones. Park et al.~[8] show that results can vary between random seeds,
+yet most studies report a single run. And some papers contain internal
+inconsistencies, such as full-precision scores that differ between
+tables in [15], or appendix results that contradict the main text in
+[27]. None of this cancels the findings, but it argues for controlled
+pipelines, repeated runs and clear answer normalization.
+
+% ======================================================================
+\section{6. Technical Trade-offs and Design Choices}
+
+\textbf{Bit width against model size.} For a fixed memory budget, a
+larger model at lower precision often beats a smaller model at higher
+precision. Dettmers and Zettlemoyer [6] find that 4 bits is almost
+always the best choice for zero-shot accuracy per total model bit, and
+that the trend reverses at 3 bits. S.~Li et al.~[11] show a 3-bit
+LLaMA2-70B beating a 16-bit LLaMA2-13B on RACE with the same 27~GB of
+memory. The catch is that this trade-off is measured on average
+benchmarks. Reasoning studies keep finding that small models [12], [15],
+[18] and hard problems [16], [18] suffer most, so a 4-bit setting that
+looks safe on average can still hide large losses on exactly the tasks
+users care about.
+
+\textbf{Memory against latency.} Weight-only quantization always saves
+memory, but speed is a separate question. GPTQ's 3.25$\times$ to
+4.5$\times$ speedups for OPT-175B come from reading fewer bytes during
+token-by-token generation, which is limited by memory, not from faster
+arithmetic [2]. LLM.int8(), in contrast, saves memory but is often
+slower than FP16 on small models [1]. Kurtić et al.~[14] show that the
+best format depends on how the model is served: W4A16 is the most
+cost-efficient when requests are handled one at a time, while W8A8 gives
+the highest throughput with asynchronous continuous batching. Reasoning
+models add a hidden cost. If a quantized model writes many more tokens
+(42.5\% more with RTN at INT4 on Qwen3-4B [20]), or loops until it runs
+out of budget [21], the per-token speedup can vanish or even reverse.
+Alimaskina et al.~[21] report that plain 2-bit inference was slower
+end-to-end than FP16 in most of their failure regimes.
+
+\textbf{Quantization quality against quantization cost.} RTN takes
+seconds and needs no data. OBQ is accurate but works in practice only up
+to about 100M parameters [2]. GPTQ sits in between: it takes minutes for
+1--3B models and about four GPU hours for 175B [2]. QEP improves quality
+further, especially at low bit widths, with a correction that costs less
+than the quantization itself [7]. Quantization-aware training was the
+only method that improved both accuracy and reasoning length in [20],
+but at a much higher cost. Cheap repairs after quantization are another
+option. Zhou et al.~[23] fix much of the 4-bit signal degradation
+without any training, but cannot fix 2-bit collapse, and Li et al.~[15]
+recover most of the lost math accuracy with a few minutes of targeted
+DPO fine-tuning.
+
+\textbf{Weights against activations.} Weight-only quantization gets
+easier as models grow, because extreme weight values become rarer, while
+activation quantization gets harder, because activation outliers grow
+[11]. W4A8 is roughly the limit at which weight-activation quantization
+still performs decently, and W4A4 breaks most models [11]. Methods that
+handle activations (LLM.int8(), SmoothQuant, rotation methods) gain
+speed and memory at the cost of extra machinery, so their evaluations
+tell us less about what weight rounding alone does.
+
+\textbf{Fitting the calibration data against generalizing beyond it.}
+Methods that use data can tailor quantization to the inputs they expect.
+At 3 bits, this helps a lot when the calibration data matches the task
+[18], [20]. But GPTQ can also overfit to a poorly matched calibration
+set and end up worse than RTN [7]. AWQ is designed to be less sensitive
+[4], and QEP includes a strength parameter to limit overfitting [7]. The
+open question is whether gains on the calibration domain come at a cost
+on other abilities.
+
+\textbf{Grid granularity against storage.} Smaller groups follow local
+weight ranges more closely, and they are one of the few changes that
+reliably improve accuracy per bit [6]. Grouping also makes extreme
+settings usable: GPTQ with groups of 128 reaches about 2.2 bits per
+weight with less than 1.5 points of perplexity loss on the largest
+models [2]. The cost is extra storage for the scales and zero-points,
+about 0.15 bits per weight at $g = 128$ [2], plus slightly more complex
+kernels.
+
+% ======================================================================
+\section{7. Limitations and Open Gaps}
+
+\textbf{Error compensation has been tested for how much it helps, not
+for what it changes.} GPTQ's advantage over RTN is shown in perplexity
+and benchmark accuracy [2], and Lian et al.~[20] show a difference in
+reasoning length. No study we found asks whether correcting rounding
+errors changes the kind of mistakes a model makes, for example whether
+RTN produces more broken output or more arithmetic slips than GPTQ at
+the same bit width. The existing error-type analyses [15], [19], [21],
+[23] use GPTQ, AWQ or other methods, without an RTN control.
+
+\textbf{Reasoning and factual recall are studied separately.} The
+reasoning literature [15]--[21] and the factual-knowledge literature
+[13], [22]--[24] use different models, formats and metrics. Zhou et
+al.~[25] cover both in one scaling study, but only as average accuracy
+within mixed ability groups. Dutta et al.~[26] report flip rates for
+GSM8K and TriviaQA without looking at the errors, and Zhou et al.~[23]
+check reasoning only briefly in an appendix. Whether quantization
+damages these two abilities through the same kind of failure
+(near-misses, collapse, or something else) has not been tested on the
+same model under the same conditions.
+
+\textbf{Error taxonomies are task-specific and rarely validated.} Each
+failure-mode study builds its own taxonomy for one task. The labels come
+from LLM judges, simple rules or manual inspection, and their
+reliability is reported very differently: a five-model vote with a 2\%
+human check in [15], but only a qualitative look at about ten examples
+in [26]. Factual errors have no established taxonomy at the level of the
+generated answer. The closest work describes them through internal
+signals, such as the rank of the correct answer [23] or neuron
+attributions [22].
+
+\textbf{Small instruction-tuned models are under-studied.} Much of the
+evidence comes from models of 7B parameters and above, from older base
+models with low reasoning accuracy [17], or from long chain-of-thought
+reasoning models [18]--[21]. Yet the studies that do include small
+models find them the most sensitive [12], [15], [16], [18], and these
+are also the models most likely to be quantized for edge devices.
+
+\textbf{The cost of domain calibration on other abilities is unknown.}
+Math-specific calibration clearly helps math at 3 bits [18], [20]. No
+study we found has measured what it does to factual recall in the same
+model, or whether it changes the types of errors that remain rather than
+just their number.
+
+\textbf{The link between uncertainty and failure is only partly
+explored.} Dutta et al.~[26] show that multiple-choice answers with a
+small margin flip most. Wang et al.~[22] show that partly learned
+relations degrade most, and Lotfi et al.~[19] that quantization noise
+concentrates where the full-precision model is uncertain. Chang et
+al.~[24] similarly find that the full-precision model can predict which
+inputs will break. Together, these results suggest that the original
+model's confidence predicts which answers will break. Whether it also
+predicts how they break, for instance whether low-confidence facts turn
+into near-miss answers while confident ones collapse, has not been
+studied.
+
+% ======================================================================
+\section{8. Implications for the Final Project}
+
+The survey points to a specific and feasible niche. Our project will use
+GPTQ [2] as its target method and RTN on the same grid as the control,
+so that any difference can be traced to error compensation alone. It
+will study a small instruction-tuned model, Qwen2.5-1.5B-Instruct,
+where the literature expects the clearest effects and where published
+GSM8K scores give a reference point [16]. It will test two abilities
+with the same pipeline: multi-step math reasoning (GSM8K) and
+open-domain factual recall from memory (TriviaQA, without context), both
+answered in free text. Before the main analysis, we will reproduce
+GPTQ's core comparison of WikiText2 perplexity for FP16, RTN and GPTQ
+[2] to confirm that the quantization pipeline works.
+
+Following Dutta et al.~[26], the unit of analysis will be the flip,
+separating harmful from repair flips. We go one step further by
+classifying the harmful flips into error types. For math, we adapt the
+taxonomy of Li et al.~[15] and add a category for degenerate output such
+as loops, which other studies report at low bit widths [17], [21]. For
+facts, we use near-miss, unrelated, abstention and degenerate answers,
+motivated by the difference between signal degradation and computation
+collapse in Zhou et al.~[23]. A single LLM judge will label all flips,
+and we will check it against a hand-labelled sample using Cohen's kappa.
+
+Two secondary questions follow from the gaps above. The first is whether
+calibrating GPTQ on math text (from the GSM8K training split, to avoid
+test leakage), which helps math reasoning at low bit widths [18], [20],
+comes at a cost to factual recall or changes the mix of errors. The
+second, motivated by [19], [22], [26], is whether the full-precision
+model's confidence predicts not only which answers flip but also what
+kind of error each one becomes. Lessons from the evaluation literature
+shape the design: the same group size for both methods [6], sanity
+checks against known GPTQ failures [7], answer normalization before
+counting flips [15], and a 3-bit setting in case 4-bit produces too few
+flips to analyze.
+
+% ======================================================================
+\section{9. Conclusion}
+
+The quantization literature has solved much of the engineering problem:
+4-bit weight-only models are cheap, fast and, by the measures most
+papers use, close to their full-precision versions. This survey has
+argued that those measures are the wrong place to stop. Studies that
+look past perplexity and multiple-choice accuracy consistently find that
+quantization changes behavior unevenly: reasoning and rare or partly
+learned facts suffer first, small models suffer most, many answers flip
+even when accuracy holds, and failures take recognizable forms that
+change with bit width, from noisy near-misses at 4 bits to collapse at 2
+bits. At the same time, the literature rarely compares methods under
+controlled conditions, rarely keeps RTN as a baseline, studies reasoning
+and knowledge in isolation, and has no shared way of describing the
+errors that quantization introduces. Characterizing those errors, and
+how they depend on error compensation, task type, calibration data and
+model confidence, is the natural next step.
+
+% ======================================================================
+\section{Statement on the Use of AI Tools}
+
+Following the course guidelines and the instructor's permission, AI
+tools were used to help draft and edit this survey, to check citations
+against the original papers, and to simplify the wording. The author
+selected and read the papers, verified every cited claim and reference,
+and takes full responsibility for the content.
+
+% ======================================================================
+\begin{thebibliography}{99}
+\small
+\setlength{\itemsep}{2pt}
+
+\bibitem{b1} T. Dettmers, M. Lewis, Y. Belkada, and L. Zettlemoyer,
+``LLM.int8(): 8-bit matrix multiplication for transformers at scale,''
+in \emph{Proc. NeurIPS}, 2022.
+
+\bibitem{b2} E. Frantar, S. Ashkboos, T. Hoefler, and D. Alistarh,
+``GPTQ: Accurate post-training quantization for generative pre-trained
+transformers,'' in \emph{Proc. ICLR}, 2023.
+
+\bibitem{b3} E. Frantar, S. P. Singh, and D. Alistarh, ``Optimal brain
+compression: A framework for accurate post-training quantization and
+pruning,'' in \emph{Proc. NeurIPS}, 2022.
+
+\bibitem{b4} J. Lin \emph{et al.}, ``AWQ: Activation-aware weight
+quantization for LLM compression and acceleration,'' in \emph{Proc.
+MLSys}, 2024.
+
+\bibitem{b5} G. Xiao, J. Lin, M. Seznec, H. Wu, J. Demouth, and S. Han,
+``SmoothQuant: Accurate and efficient post-training quantization for
+large language models,'' in \emph{Proc. ICML}, 2023.
+
+\bibitem{b6} T. Dettmers and L. Zettlemoyer, ``The case for 4-bit
+precision: k-bit inference scaling laws,'' in \emph{Proc. ICML}, 2023.
+
+\bibitem{b7} Y. Arai and Y. Ichikawa, ``Quantization error propagation:
+Revisiting layer-wise post-training quantization,'' in \emph{Proc.
+NeurIPS}, 2025.
+
+\bibitem{b8} S. Park, C. Kim, and K.-S. Chung, ``One-shot training for
+reduction of performance variance in LLM rotation quantization,'' in
+\emph{Proc. Int. Conf. Artif. Intell. Inf. Commun. (ICAIIC)}, 2026,
+pp.~173--176, doi: 10.1109/ICAIIC68212.2026.11454275.
+
+\bibitem{b9} S. Park and K.-S. Chung, ``SpinOut: Enhanced rotation-based
+quantization for LLM by outlier injection,'' \emph{IEEE Access},
+vol.~14, pp.~24082--24095, 2026, doi: 10.1109/ACCESS.2026.3664084.
+
+\bibitem{b10} X. Li, ``Outlier-aware low-bit quantization for LLM-based
+TTS: DuQuant MLP-only W4A8 quantization on TTS model,'' in \emph{Proc.
+6th Int. Conf. Adv. Electr., Electron. Comput. Technol. (EECT)}, 2026,
+doi: 10.1109/EECT68756.2026.11517795.
+
+\bibitem{b11} S. Li \emph{et al.}, ``Evaluating quantized large language
+models,'' in \emph{Proc. ICML}, 2024.
+
+\bibitem{b12} J. Lee, S. Park, J. Kwon, J. Oh, and Y. Kwon, ``Exploring
+the trade-offs: Quantization methods, task difficulty, and model size in
+large language models from edge to giant,'' in \emph{Proc. IJCAI},
+2025, pp.~8113--8121.
+
+\bibitem{b13} A. Jaiswal, Z. Gan, X. Du, B. Zhang, Z. Wang, and Y. Yang,
+``Compressing LLMs: The truth is rarely pure and never simple,'' in
+\emph{Proc. ICLR}, 2024.
+
+\bibitem{b14} E. Kurtić, A. N. Marques, S. Pandit, M. Kurtz, and D.
+Alistarh, ``\,`Give me BF16 or give me death'? Accuracy-performance
+trade-offs in LLM quantization,'' in \emph{Proc. ACL}, 2025,
+pp.~26872--26886.
+
+\bibitem{b15} Z. Li \emph{et al.}, ``Quantization meets reasoning:
+Exploring LLM low-bit quantization degradation for mathematical
+reasoning,'' arXiv:2501.03035, 2025.
+
+\bibitem{b16} Z. Li \emph{et al.}, ``Quantization meets reasoning:
+Exploring and mitigating degradation of low-bit LLMs in mathematical
+reasoning,'' arXiv:2505.11574v4, 2026.
+
+\bibitem{b17} P. Liu \emph{et al.}, ``Do emergent abilities exist in
+quantized large language models: An empirical study,'' in \emph{Proc.
+LREC-COLING}, 2024, pp.~5174--5190.
+
+\bibitem{b18} R. Liu \emph{et al.}, ``Quantization hurts reasoning? An
+empirical study on quantized reasoning models,'' in \emph{Proc. COLM},
+2025.
+
+\bibitem{b19} S. Lotfi, P. Kirichenko, S. Li, and Z. Liu, ``Quantized
+reasoning models think they need to think longer, but they do not,'' in
+\emph{Proc. NeurIPS}, 2026, to appear.
+
+\bibitem{b20} X. Lian \emph{et al.}, ``Quantization inflates reasoning:
+Token inflation as a hidden cost of low-bit reasoning models,''
+arXiv:2606.25519, 2026.
+
+\bibitem{b21} E. Alimaskina, D. Rudas, D. Shveykin, G. Molodtsov, P.
+Vasiliev, and A. Beznosikov, ``Extreme low-bit inference in reasoning
+models: Failure modes and targeted recovery,'' arXiv:2606.02011, 2026.
+
+\bibitem{b22} Q. Wang \emph{et al.}, ``Through a compressed lens:
+Investigating the impact of quantization on factual knowledge recall,''
+in \emph{Proc. 6th Workshop on Trustworthy NLP (TrustNLP)}, 2026,
+pp.~21--39.
+
+\bibitem{b23} C. Zhou \emph{et al.}, ``From signal degradation to
+computation collapse: Uncovering the two failure modes of LLM
+quantization,'' in \emph{Findings of ACL}, 2026.
+
+\bibitem{b24} T.-Y. Chang, M. Zhang, J. Thomason, and R. Jia, ``Why do
+some inputs break low-bit LLM quantization?'' in \emph{Proc. EMNLP},
+2025, pp.~3410--3429.
+
+\bibitem{b25} C. Zhou \emph{et al.}, ``Task-stratified knowledge scaling
+laws for post-training quantized large language models,'' in
+\emph{Findings of ACL}, 2026.
+
+\bibitem{b26} A. Dutta, S. Krishnan, N. Kwatra, and R. Ramjee,
+``Accuracy is not all you need,'' in \emph{Proc. NeurIPS}, 2024.
+
+\bibitem{b27} B. Rababah \emph{et al.}, ``The illusion of equivalency:
+Statistical characterization of quantization effects in LLMs,''
+arXiv:2607.08734, 2026.
+
+\bibitem{b28} M. Williams and N. Aletras, ``On the impact of calibration
+data in post-training quantization and pruning,'' in \emph{Proc. ACL},
+2024, pp.~10100--10118.
+
+\bibitem{b29} Y. Liu \emph{et al.}, ``Evaluating the generalization
+ability of quantized LLMs: Benchmark, analysis, and toolbox,''
+arXiv:2406.12928, 2024.
+
+\end{thebibliography}
+
+\end{document}

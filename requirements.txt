@@ -1,0 +1,7 @@
+# Runs on the Kaggle GPU image (Python 3, CUDA). Main libraries:
+torch
+transformers
+datasets
+accelerate
+numpy
+scipy
