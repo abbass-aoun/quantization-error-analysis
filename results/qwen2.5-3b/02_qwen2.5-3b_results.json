@@ -1,0 +1,23 @@
+{
+ "fp16_wiki": 8.557053337090302,
+ "fp16_c4": 13.87793393488002,
+ "rtn4_quant_s": 9.127203226089478,
+ "rtn4_wiki": 9.5965835182265,
+ "rtn4_c4": 15.42376449774943,
+ "gptq4_quant_s": 1409.0524764060974,
+ "gptq4_wiki": 8.92102225495649,
+ "gptq4_c4": 14.33043081714285,
+ "settings": {
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "bits": 4,
+  "group": 128,
+  "sym": false,
+  "calib": "C4 en shard 00000",
+  "nsamples": 128,
+  "seqlen": 2048,
+  "seed": 0,
+  "damp": 0.01,
+  "act_order": true,
+  "static_groups": true
+ }
+}
