@@ -1,0 +1,397 @@
+{"key": "gsm8k|rtn4|0", "task": "gsm8k", "model": "rtn4", "id": "0", "label": "conceptual", "source": "judge", "reason": "Assumed all remaining eggs used for muffins, misreading 4 eggs."}
+{"key": "gsm8k|rtn4|100", "task": "gsm8k", "model": "rtn4", "id": "100", "label": "conceptual", "source": "judge", "reason": "Interpreted '10 times more' as multiplication"}
+{"key": "gsm8k|rtn4|1001", "task": "gsm8k", "model": "rtn4", "id": "1001", "label": "method", "source": "judge", "reason": "Incorrect start-time calculation; wrong subtraction plan"}
+{"key": "gsm8k|rtn4|1003", "task": "gsm8k", "model": "rtn4", "id": "1003", "label": "conceptual", "source": "judge", "reason": "Omitted multiplying per\u2011student cost by number of sessions"}
+{"key": "gsm8k|rtn4|1005", "task": "gsm8k", "model": "rtn4", "id": "1005", "label": "conceptual", "source": "judge", "reason": "Did not multiply babies by number of females"}
+{"key": "gsm8k|rtn4|1009", "task": "gsm8k", "model": "rtn4", "id": "1009", "label": "conceptual", "source": "judge", "reason": "Misinterpreted gender fractions, used wrong splits"}
+{"key": "gsm8k|rtn4|1013", "task": "gsm8k", "model": "rtn4", "id": "1013", "label": "conceptual", "source": "judge", "reason": "Divided by hourly earnings instead of weekly earnings"}
+{"key": "gsm8k|rtn4|1017", "task": "gsm8k", "model": "rtn4", "id": "1017", "label": "conceptual", "source": "judge", "reason": "Misinterpreted album counts"}
+{"key": "gsm8k|rtn4|1022", "task": "gsm8k", "model": "rtn4", "id": "1022", "label": "conceptual", "source": "judge", "reason": "Misread price relationship; used 4/3 instead of 3 times"}
+{"key": "gsm8k|rtn4|1025", "task": "gsm8k", "model": "rtn4", "id": "1025", "label": "conceptual", "source": "judge", "reason": "Ignored the \"except 10\" condition"}
+{"key": "gsm8k|rtn4|1026", "task": "gsm8k", "model": "rtn4", "id": "1026", "label": "conceptual", "source": "judge", "reason": "Used 12\u202flb as iron rate, halved steel capacity"}
+{"key": "gsm8k|rtn4|1039", "task": "gsm8k", "model": "rtn4", "id": "1039", "label": "conceptual", "source": "judge", "reason": "Forgot to multiply by two fabric pieces"}
+{"key": "gsm8k|rtn4|1056", "task": "gsm8k", "model": "rtn4", "id": "1056", "label": "conceptual", "source": "judge", "reason": "Incorrectly multiplied loads; misread capacity relationship"}
+{"key": "gsm8k|rtn4|1064", "task": "gsm8k", "model": "rtn4", "id": "1064", "label": "conceptual", "source": "judge", "reason": "Multiplied Wednesday by Tuesday instead of Monday"}
+{"key": "gsm8k|rtn4|1071", "task": "gsm8k", "model": "rtn4", "id": "1071", "label": "conceptual", "source": "judge", "reason": "Used 45 as non\u2011attending guests instead of 4"}
+{"key": "gsm8k|rtn4|1073", "task": "gsm8k", "model": "rtn4", "id": "1073", "label": "conceptual", "source": "judge", "reason": "Assumes equal split of bananas among monkeys"}
+{"key": "gsm8k|rtn4|1080", "task": "gsm8k", "model": "rtn4", "id": "1080", "label": "conceptual", "source": "judge", "reason": "Incorrect seconds\u2011per\u2011hour conversion"}
+{"key": "gsm8k|rtn4|1092", "task": "gsm8k", "model": "rtn4", "id": "1092", "label": "conceptual", "source": "judge", "reason": "Misinterpreted Allosaurus eating the last 270\u202fkg as leftover"}
+{"key": "gsm8k|rtn4|11", "task": "gsm8k", "model": "rtn4", "id": "11", "label": "execution", "source": "judge", "reason": "Added numbers incorrectly"}
+{"key": "gsm8k|rtn4|1109", "task": "gsm8k", "model": "rtn4", "id": "1109", "label": "conceptual", "source": "judge", "reason": "Divided by 3 women instead of total 6"}
+{"key": "gsm8k|rtn4|1115", "task": "gsm8k", "model": "rtn4", "id": "1115", "label": "conceptual", "source": "judge", "reason": "Ignored the $2 left, miscomputed money spent on books"}
+{"key": "gsm8k|rtn4|1120", "task": "gsm8k", "model": "rtn4", "id": "1120", "label": "conceptual", "source": "judge", "reason": "Omitted twice\u2011a\u2011month factor, used only one round trip"}
+{"key": "gsm8k|rtn4|1129", "task": "gsm8k", "model": "rtn4", "id": "1129", "label": "reasoning", "source": "judge", "reason": "Unjustified assumption leading to wrong difference"}
+{"key": "gsm8k|rtn4|1130", "task": "gsm8k", "model": "rtn4", "id": "1130", "label": "conceptual", "source": "judge", "reason": "Ignored crayon weight, considered only boxes"}
+{"key": "gsm8k|rtn4|1132", "task": "gsm8k", "model": "rtn4", "id": "1132", "label": "conceptual", "source": "judge", "reason": "Reversed brother/Valerie earnings relationship"}
+{"key": "gsm8k|rtn4|1142", "task": "gsm8k", "model": "rtn4", "id": "1142", "label": "execution", "source": "judge", "reason": "Arithmetic error in subtraction"}
+{"key": "gsm8k|rtn4|1146", "task": "gsm8k", "model": "rtn4", "id": "1146", "label": "conceptual", "source": "judge", "reason": "Incorrect equation linking revenue to cost"}
+{"key": "gsm8k|rtn4|1147", "task": "gsm8k", "model": "rtn4", "id": "1147", "label": "conceptual", "source": "judge", "reason": "Used max days instead of total sum"}
+{"key": "gsm8k|rtn4|1166", "task": "gsm8k", "model": "rtn4", "id": "1166", "label": "conceptual", "source": "judge", "reason": "Used 7\u2011year amount instead of 10\u2011year for year 8"}
+{"key": "gsm8k|rtn4|1170", "task": "gsm8k", "model": "rtn4", "id": "1170", "label": "conceptual", "source": "judge", "reason": "Assumed equal share among all colors, ignored half yellow"}
+{"key": "gsm8k|rtn4|1180", "task": "gsm8k", "model": "rtn4", "id": "1180", "label": "conceptual", "source": "judge", "reason": "Refunded non\u2011spoiled milk cost instead of spoiled milk"}
+{"key": "gsm8k|rtn4|1183", "task": "gsm8k", "model": "rtn4", "id": "1183", "label": "conceptual", "source": "judge", "reason": "Misinterpreted apple counting process"}
+{"key": "gsm8k|rtn4|1186", "task": "gsm8k", "model": "rtn4", "id": "1186", "label": "execution", "source": "judge", "reason": "Arithmetic addition error"}
+{"key": "gsm8k|rtn4|1193", "task": "gsm8k", "model": "rtn4", "id": "1193", "label": "conceptual", "source": "judge", "reason": "Assumed each task repeats weekly instead of using given total counts"}
+{"key": "gsm8k|rtn4|1198", "task": "gsm8k", "model": "rtn4", "id": "1198", "label": "conceptual", "source": "judge", "reason": "Interpreted 1/4 more as 1/4 of"}
+{"key": "gsm8k|rtn4|1204", "task": "gsm8k", "model": "rtn4", "id": "1204", "label": "execution", "source": "judge", "reason": "Arithmetic subtraction error, 700-280-252 miscomputed"}
+{"key": "gsm8k|rtn4|1206", "task": "gsm8k", "model": "rtn4", "id": "1206", "label": "conceptual", "source": "judge", "reason": "Used house value instead of loan amount for leftover"}
+{"key": "gsm8k|rtn4|1207", "task": "gsm8k", "model": "rtn4", "id": "1207", "label": "execution", "source": "judge", "reason": "Added weights incorrectly"}
+{"key": "gsm8k|rtn4|121", "task": "gsm8k", "model": "rtn4", "id": "121", "label": "execution", "source": "judge", "reason": "Added numbers incorrectly, got 23 instead of 27"}
+{"key": "gsm8k|rtn4|1239", "task": "gsm8k", "model": "rtn4", "id": "1239", "label": "conceptual", "source": "judge", "reason": "Incorrect formula linking minutes and classrooms"}
+{"key": "gsm8k|rtn4|1241", "task": "gsm8k", "model": "rtn4", "id": "1241", "label": "conceptual", "source": "judge", "reason": "Misinterpreted $1 for 3 eggs as $12 per dozen"}
+{"key": "gsm8k|rtn4|1244", "task": "gsm8k", "model": "rtn4", "id": "1244", "label": "conceptual", "source": "judge", "reason": "Used 60% instead of required 70%"}
+{"key": "gsm8k|rtn4|1258", "task": "gsm8k", "model": "rtn4", "id": "1258", "label": "conceptual", "source": "judge", "reason": "Reversed cost relationship of main and additional phones"}
+{"key": "gsm8k|rtn4|1264", "task": "gsm8k", "model": "rtn4", "id": "1264", "label": "conceptual", "source": "judge", "reason": "Omitted residual\u2011heat kernels"}
+{"key": "gsm8k|rtn4|1271", "task": "gsm8k", "model": "rtn4", "id": "1271", "label": "execution", "source": "judge", "reason": "Added red, orange, yellow counts incorrectly"}
+{"key": "gsm8k|rtn4|1294", "task": "gsm8k", "model": "rtn4", "id": "1294", "label": "conceptual", "source": "judge", "reason": "Applied 50% off to both shirts instead of one"}
+{"key": "gsm8k|rtn4|1299", "task": "gsm8k", "model": "rtn4", "id": "1299", "label": "conceptual", "source": "judge", "reason": "Counted only one movie ticket instead of two"}
+{"key": "gsm8k|rtn4|1300", "task": "gsm8k", "model": "rtn4", "id": "1300", "label": "conceptual", "source": "judge", "reason": "Calculated work days by division instead of multiplication"}
+{"key": "gsm8k|rtn4|1306", "task": "gsm8k", "model": "rtn4", "id": "1306", "label": "degeneration", "source": "rule", "reason": ""}
+{"key": "gsm8k|rtn4|135", "task": "gsm8k", "model": "rtn4", "id": "135", "label": "conceptual", "source": "judge", "reason": "Forgot Brian lost 5 games before comparison"}
+{"key": "gsm8k|rtn4|137", "task": "gsm8k", "model": "rtn4", "id": "137", "label": "conceptual", "source": "judge", "reason": "Forgot to add the $5 tip"}
+{"key": "gsm8k|rtn4|146", "task": "gsm8k", "model": "rtn4", "id": "146", "label": "conceptual", "source": "judge", "reason": "Applied 1/4 to second box, not first"}
+{"key": "gsm8k|rtn4|148", "task": "gsm8k", "model": "rtn4", "id": "148", "label": "method", "source": "judge", "reason": "Used wrong formula for change (subtracted instead of added)."}
+{"key": "gsm8k|rtn4|150", "task": "gsm8k", "model": "rtn4", "id": "150", "label": "reasoning", "source": "judge", "reason": "Took longer time as waiting time instead of difference"}
+{"key": "gsm8k|rtn4|151", "task": "gsm8k", "model": "rtn4", "id": "151", "label": "conceptual", "source": "judge", "reason": "Counts tires per vehicle incorrectly"}
+{"key": "gsm8k|rtn4|157", "task": "gsm8k", "model": "rtn4", "id": "157", "label": "conceptual", "source": "judge", "reason": "Wrong round\u2011trip distance and omitted Kelly's first run"}
+{"key": "gsm8k|rtn4|164", "task": "gsm8k", "model": "rtn4", "id": "164", "label": "execution", "source": "judge", "reason": "Sign error in final subtraction"}
+{"key": "gsm8k|rtn4|173", "task": "gsm8k", "model": "rtn4", "id": "173", "label": "method", "source": "judge", "reason": "Applied 50% increase twice, over\u2011inflating total"}
+{"key": "gsm8k|rtn4|188", "task": "gsm8k", "model": "rtn4", "id": "188", "label": "method", "source": "judge", "reason": "Omitted purchase cost in profit calculation"}
+{"key": "gsm8k|rtn4|189", "task": "gsm8k", "model": "rtn4", "id": "189", "label": "conceptual", "source": "judge", "reason": "Misinterpreted food cost relation"}
+{"key": "gsm8k|rtn4|19", "task": "gsm8k", "model": "rtn4", "id": "19", "label": "method", "source": "judge", "reason": "Used wrong formula for remaining time"}
+{"key": "gsm8k|rtn4|191", "task": "gsm8k", "model": "rtn4", "id": "191", "label": "conceptual", "source": "judge", "reason": "Double\u2011counted ducks in daily total"}
+{"key": "gsm8k|rtn4|199", "task": "gsm8k", "model": "rtn4", "id": "199", "label": "conceptual", "source": "judge", "reason": "Counted all sentences for each publisher"}
+{"key": "gsm8k|rtn4|2", "task": "gsm8k", "model": "rtn4", "id": "2", "label": "method", "source": "judge", "reason": "Profit formula wrong, ignored repair cost"}
+{"key": "gsm8k|rtn4|203", "task": "gsm8k", "model": "rtn4", "id": "203", "label": "execution", "source": "judge", "reason": "Correct setup, arithmetic sum miscalculated"}
+{"key": "gsm8k|rtn4|204", "task": "gsm8k", "model": "rtn4", "id": "204", "label": "execution", "source": "judge", "reason": "Incorrect addition of component totals"}
+{"key": "gsm8k|rtn4|206", "task": "gsm8k", "model": "rtn4", "id": "206", "label": "execution", "source": "judge", "reason": "Arithmetic multiplication errors on both periods"}
+{"key": "gsm8k|rtn4|209", "task": "gsm8k", "model": "rtn4", "id": "209", "label": "conceptual", "source": "judge", "reason": "Misread half\u2011dozen plates as two plates"}
+{"key": "gsm8k|rtn4|214", "task": "gsm8k", "model": "rtn4", "id": "214", "label": "degeneration", "source": "rule", "reason": ""}
+{"key": "gsm8k|rtn4|216", "task": "gsm8k", "model": "rtn4", "id": "216", "label": "execution", "source": "judge", "reason": "Multiplication error: 165*12 calculated as 2020"}
+{"key": "gsm8k|rtn4|218", "task": "gsm8k", "model": "rtn4", "id": "218", "label": "degeneration", "source": "rule", "reason": ""}
+{"key": "gsm8k|rtn4|226", "task": "gsm8k", "model": "rtn4", "id": "226", "label": "conceptual", "source": "judge", "reason": "Omitted fire cards from total count"}
+{"key": "gsm8k|rtn4|230", "task": "gsm8k", "model": "rtn4", "id": "230", "label": "execution", "source": "judge", "reason": "Incorrect sum of components"}
+{"key": "gsm8k|rtn4|238", "task": "gsm8k", "model": "rtn4", "id": "238", "label": "execution", "source": "judge", "reason": "Arithmetic error adding ages"}
+{"key": "gsm8k|rtn4|244", "task": "gsm8k", "model": "rtn4", "id": "244", "label": "conceptual", "source": "judge", "reason": "Omitted Colby\u2019s subtraction"}
+{"key": "gsm8k|rtn4|257", "task": "gsm8k", "model": "rtn4", "id": "257", "label": "conceptual", "source": "judge", "reason": "Treated weight per foot instead of per 10\u2011foot section"}
+{"key": "gsm8k|rtn4|265", "task": "gsm8k", "model": "rtn4", "id": "265", "label": "execution", "source": "judge", "reason": "Added fees incorrectly, arithmetic mistake"}
+{"key": "gsm8k|rtn4|275", "task": "gsm8k", "model": "rtn4", "id": "275", "label": "execution", "source": "judge", "reason": "Added wrong term (60 instead of 48)"}
+{"key": "gsm8k|rtn4|282", "task": "gsm8k", "model": "rtn4", "id": "282", "label": "conceptual", "source": "judge", "reason": "Omitted coaches from total people"}
+{"key": "gsm8k|rtn4|29", "task": "gsm8k", "model": "rtn4", "id": "29", "label": "execution", "source": "judge", "reason": "Added 33+66 incorrectly, arithmetic error"}
+{"key": "gsm8k|rtn4|290", "task": "gsm8k", "model": "rtn4", "id": "290", "label": "conceptual", "source": "judge", "reason": "Reversed relationship of total medals vs their share"}
+{"key": "gsm8k|rtn4|304", "task": "gsm8k", "model": "rtn4", "id": "304", "label": "conceptual", "source": "judge", "reason": "Omitted weekly bonus from calculation"}
+{"key": "gsm8k|rtn4|313", "task": "gsm8k", "model": "rtn4", "id": "313", "label": "conceptual", "source": "judge", "reason": "Used current Cera age instead of age six years ago"}
+{"key": "gsm8k|rtn4|315", "task": "gsm8k", "model": "rtn4", "id": "315", "label": "conceptual", "source": "judge", "reason": "Misinterpreted 1/4 of illness number as 1/4 of remaining"}
+{"key": "gsm8k|rtn4|320", "task": "gsm8k", "model": "rtn4", "id": "320", "label": "conceptual", "source": "judge", "reason": "Incorrectly handled people leaving; misapplied counts"}
+{"key": "gsm8k|rtn4|322", "task": "gsm8k", "model": "rtn4", "id": "322", "label": "conceptual", "source": "judge", "reason": "Assumed each box holds 26 pencils"}
+{"key": "gsm8k|rtn4|323", "task": "gsm8k", "model": "rtn4", "id": "323", "label": "conceptual", "source": "judge", "reason": "Misinterpreted weakening effects of cream and ice cubes"}
+{"key": "gsm8k|rtn4|326", "task": "gsm8k", "model": "rtn4", "id": "326", "label": "execution", "source": "judge", "reason": "Arithmetic simplification error"}
+{"key": "gsm8k|rtn4|341", "task": "gsm8k", "model": "rtn4", "id": "341", "label": "execution", "source": "judge", "reason": "Summation error"}
+{"key": "gsm8k|rtn4|346", "task": "gsm8k", "model": "rtn4", "id": "346", "label": "conceptual", "source": "judge", "reason": "Changed weekly problem to yearly scope"}
+{"key": "gsm8k|rtn4|351", "task": "gsm8k", "model": "rtn4", "id": "351", "label": "conceptual", "source": "judge", "reason": "Misinterpreted roses needing extra 60 pots"}
+{"key": "gsm8k|rtn4|361", "task": "gsm8k", "model": "rtn4", "id": "361", "label": "conceptual", "source": "judge", "reason": "Miscomputed third-leg distance (150 vs 125)"}
+{"key": "gsm8k|rtn4|37", "task": "gsm8k", "model": "rtn4", "id": "37", "label": "conceptual", "source": "judge", "reason": "Assumed all 13 sets remain, ignored sales"}
+{"key": "gsm8k|rtn4|383", "task": "gsm8k", "model": "rtn4", "id": "383", "label": "conceptual", "source": "judge", "reason": "Used 4 hours instead of 9 hours for profit per hour"}
+{"key": "gsm8k|rtn4|385", "task": "gsm8k", "model": "rtn4", "id": "385", "label": "conceptual", "source": "judge", "reason": "Counted all members as female, misread gender count"}
+{"key": "gsm8k|rtn4|39", "task": "gsm8k", "model": "rtn4", "id": "39", "label": "conceptual", "source": "judge", "reason": "Included skipping distance not asked for"}
+{"key": "gsm8k|rtn4|394", "task": "gsm8k", "model": "rtn4", "id": "394", "label": "conceptual", "source": "judge", "reason": "Multiplied rows and columns twice, inflating total books"}
+{"key": "gsm8k|rtn4|397", "task": "gsm8k", "model": "rtn4", "id": "397", "label": "conceptual", "source": "judge", "reason": "Ignored initial $50 balance"}
+{"key": "gsm8k|rtn4|4", "task": "gsm8k", "model": "rtn4", "id": "4", "label": "method", "source": "judge", "reason": "Calculated per\u2011chicken feed instead of total"}
+{"key": "gsm8k|rtn4|408", "task": "gsm8k", "model": "rtn4", "id": "408", "label": "method", "source": "judge", "reason": "Used wrong formula for early time, subtracting reading time twice"}
+{"key": "gsm8k|rtn4|410", "task": "gsm8k", "model": "rtn4", "id": "410", "label": "conceptual", "source": "judge", "reason": "Calculated taffy cost incorrectly, treated both pounds at half price"}
+{"key": "gsm8k|rtn4|415", "task": "gsm8k", "model": "rtn4", "id": "415", "label": "conceptual", "source": "judge", "reason": "Assumed sister takes average trees apples"}
+{"key": "gsm8k|rtn4|417", "task": "gsm8k", "model": "rtn4", "id": "417", "label": "conceptual", "source": "judge", "reason": "Counted only 6 days of 300\u202fkm instead of 7"}
+{"key": "gsm8k|rtn4|418", "task": "gsm8k", "model": "rtn4", "id": "418", "label": "conceptual", "source": "judge", "reason": "Reversed locker size relationship"}
+{"key": "gsm8k|rtn4|425", "task": "gsm8k", "model": "rtn4", "id": "425", "label": "conceptual", "source": "judge", "reason": "Misidentified feeder types and bird counts"}
+{"key": "gsm8k|rtn4|429", "task": "gsm8k", "model": "rtn4", "id": "429", "label": "conceptual", "source": "judge", "reason": "Provided individual counts instead of total"}
+{"key": "gsm8k|rtn4|438", "task": "gsm8k", "model": "rtn4", "id": "438", "label": "method", "source": "judge", "reason": "Divided by wrong number of servings"}
+{"key": "gsm8k|rtn4|45", "task": "gsm8k", "model": "rtn4", "id": "45", "label": "conceptual", "source": "judge", "reason": "Misread \"2/5 times more\" as 2/5 of Monday"}
+{"key": "gsm8k|rtn4|457", "task": "gsm8k", "model": "rtn4", "id": "457", "label": "conceptual", "source": "judge", "reason": "Omitted the 25 added fairies from the total"}
+{"key": "gsm8k|rtn4|466", "task": "gsm8k", "model": "rtn4", "id": "466", "label": "conceptual", "source": "judge", "reason": "Ignored Becky\u2019s $1 discount"}
+{"key": "gsm8k|rtn4|467", "task": "gsm8k", "model": "rtn4", "id": "467", "label": "conceptual", "source": "judge", "reason": "Omitted pillow cases from total sum"}
+{"key": "gsm8k|rtn4|471", "task": "gsm8k", "model": "rtn4", "id": "471", "label": "conceptual", "source": "judge", "reason": "Misinterpreted 1/3 left as 1/3 used"}
+{"key": "gsm8k|rtn4|478", "task": "gsm8k", "model": "rtn4", "id": "478", "label": "conceptual", "source": "judge", "reason": "Added only one group's employees instead of all three"}
+{"key": "gsm8k|rtn4|479", "task": "gsm8k", "model": "rtn4", "id": "479", "label": "conceptual", "source": "judge", "reason": "Forgot to multiply hotel cost by 3 days"}
+{"key": "gsm8k|rtn4|49", "task": "gsm8k", "model": "rtn4", "id": "49", "label": "conceptual", "source": "judge", "reason": "Ignored 3/4 occupancy, used only Richard's unit"}
+{"key": "gsm8k|rtn4|50", "task": "gsm8k", "model": "rtn4", "id": "50", "label": "execution", "source": "judge", "reason": "Wrong multiplication and division calculations"}
+{"key": "gsm8k|rtn4|500", "task": "gsm8k", "model": "rtn4", "id": "500", "label": "execution", "source": "judge", "reason": "Incorrect algebraic simplification of terms"}
+{"key": "gsm8k|rtn4|504", "task": "gsm8k", "model": "rtn4", "id": "504", "label": "conceptual", "source": "judge", "reason": "Forgot there are two strawberry packs"}
+{"key": "gsm8k|rtn4|52", "task": "gsm8k", "model": "rtn4", "id": "52", "label": "conceptual", "source": "judge", "reason": "Misread target weight, introduced incorrect 12\u2011pound goal"}
+{"key": "gsm8k|rtn4|531", "task": "gsm8k", "model": "rtn4", "id": "531", "label": "execution", "source": "judge", "reason": "Arithmetic error: 48-8+40 computed as 70"}
+{"key": "gsm8k|rtn4|532", "task": "gsm8k", "model": "rtn4", "id": "532", "label": "conceptual", "source": "judge", "reason": "Used current age instead of age in 8 years"}
+{"key": "gsm8k|rtn4|542", "task": "gsm8k", "model": "rtn4", "id": "542", "label": "execution", "source": "judge", "reason": "Subtracted 13 from 20 incorrectly, gave 6"}
+{"key": "gsm8k|rtn4|554", "task": "gsm8k", "model": "rtn4", "id": "554", "label": "conceptual", "source": "judge", "reason": "Compared per\u2011mile warm time to total cold time"}
+{"key": "gsm8k|rtn4|563", "task": "gsm8k", "model": "rtn4", "id": "563", "label": "conceptual", "source": "judge", "reason": "Counts only two candles instead of ages"}
+{"key": "gsm8k|rtn4|567", "task": "gsm8k", "model": "rtn4", "id": "567", "label": "conceptual", "source": "judge", "reason": "Halved amount again for fifth tooth, misreading rule"}
+{"key": "gsm8k|rtn4|569", "task": "gsm8k", "model": "rtn4", "id": "569", "label": "conceptual", "source": "judge", "reason": "Misread Mitchell's revenue as $21 instead of 21\u00d7$4"}
+{"key": "gsm8k|rtn4|570", "task": "gsm8k", "model": "rtn4", "id": "570", "label": "conceptual", "source": "judge", "reason": "Counted wooden days incorrectly (4 instead of 3)"}
+{"key": "gsm8k|rtn4|571", "task": "gsm8k", "model": "rtn4", "id": "571", "label": "execution", "source": "judge", "reason": "Incorrect addition of 200+60+48 gave 300"}
+{"key": "gsm8k|rtn4|576", "task": "gsm8k", "model": "rtn4", "id": "576", "label": "execution", "source": "judge", "reason": "Arithmetic error in installation cost (216\u00d734)"}
+{"key": "gsm8k|rtn4|578", "task": "gsm8k", "model": "rtn4", "id": "578", "label": "conceptual", "source": "judge", "reason": "Omitted final multiplication step"}
+{"key": "gsm8k|rtn4|58", "task": "gsm8k", "model": "rtn4", "id": "58", "label": "conceptual", "source": "judge", "reason": "Misinterpreted 25% fee as delivery fee, omitted $3"}
+{"key": "gsm8k|rtn4|584", "task": "gsm8k", "model": "rtn4", "id": "584", "label": "conceptual", "source": "judge", "reason": "Omitted discount and miscounted total pairs of contacts"}
+{"key": "gsm8k|rtn4|585", "task": "gsm8k", "model": "rtn4", "id": "585", "label": "conceptual", "source": "judge", "reason": "Misinterpreted John's hours relative to Jill"}
+{"key": "gsm8k|rtn4|588", "task": "gsm8k", "model": "rtn4", "id": "588", "label": "conceptual", "source": "judge", "reason": "Ignored second increase, averaged only two measurements"}
+{"key": "gsm8k|rtn4|593", "task": "gsm8k", "model": "rtn4", "id": "593", "label": "reasoning", "source": "judge", "reason": "Incorrect comparison of heights"}
+{"key": "gsm8k|rtn4|596", "task": "gsm8k", "model": "rtn4", "id": "596", "label": "conceptual", "source": "judge", "reason": "Applied crown cost to both implants instead of one"}
+{"key": "gsm8k|rtn4|597", "task": "gsm8k", "model": "rtn4", "id": "597", "label": "conceptual", "source": "judge", "reason": "Misidentified largest angle as sum of others"}
+{"key": "gsm8k|rtn4|598", "task": "gsm8k", "model": "rtn4", "id": "598", "label": "execution", "source": "judge", "reason": "Added coin values incorrectly, got 445 instead of 345"}
+{"key": "gsm8k|rtn4|602", "task": "gsm8k", "model": "rtn4", "id": "602", "label": "conceptual", "source": "judge", "reason": "Subtracted prior 3\u202fh, misreading \u201cadditional hours\u201d"}
+{"key": "gsm8k|rtn4|620", "task": "gsm8k", "model": "rtn4", "id": "620", "label": "conceptual", "source": "judge", "reason": "Added played times instead of remaining plays"}
+{"key": "gsm8k|rtn4|622", "task": "gsm8k", "model": "rtn4", "id": "622", "label": "execution", "source": "judge", "reason": "Incorrect subtraction 20-6 gave 15"}
+{"key": "gsm8k|rtn4|63", "task": "gsm8k", "model": "rtn4", "id": "63", "label": "conceptual", "source": "judge", "reason": "Treated $140 as total for half-year, not monthly"}
+{"key": "gsm8k|rtn4|630", "task": "gsm8k", "model": "rtn4", "id": "630", "label": "conceptual", "source": "judge", "reason": "Subtracted women from total riders instead of upright riders"}
+{"key": "gsm8k|rtn4|637", "task": "gsm8k", "model": "rtn4", "id": "637", "label": "conceptual", "source": "judge", "reason": "Misinterpreted Reggie's distance formula"}
+{"key": "gsm8k|rtn4|64", "task": "gsm8k", "model": "rtn4", "id": "64", "label": "degeneration", "source": "rule", "reason": ""}
+{"key": "gsm8k|rtn4|640", "task": "gsm8k", "model": "rtn4", "id": "640", "label": "execution", "source": "judge", "reason": "Incorrect addition of costs"}
+{"key": "gsm8k|rtn4|642", "task": "gsm8k", "model": "rtn4", "id": "642", "label": "execution", "source": "judge", "reason": "Multiplication error for shirt cost"}
+{"key": "gsm8k|rtn4|644", "task": "gsm8k", "model": "rtn4", "id": "644", "label": "conceptual", "source": "judge", "reason": "Took husband's age as mom's, not son's"}
+{"key": "gsm8k|rtn4|648", "task": "gsm8k", "model": "rtn4", "id": "648", "label": "conceptual", "source": "judge", "reason": "Omitted teacher's cupcakes"}
+{"key": "gsm8k|rtn4|652", "task": "gsm8k", "model": "rtn4", "id": "652", "label": "method", "source": "judge", "reason": "Used cumulative doubling instead of constant twice\u2011first\u2011hour cost"}
+{"key": "gsm8k|rtn4|657", "task": "gsm8k", "model": "rtn4", "id": "657", "label": "conceptual", "source": "judge", "reason": "Misread fuel cost relationship"}
+{"key": "gsm8k|rtn4|681", "task": "gsm8k", "model": "rtn4", "id": "681", "label": "conceptual", "source": "judge", "reason": "Used wrong relation for Summer's cookies"}
+{"key": "gsm8k|rtn4|683", "task": "gsm8k", "model": "rtn4", "id": "683", "label": "conceptual", "source": "judge", "reason": "Misread turtle half-time as 40\u202fmin instead of 30\u202fmin"}
+{"key": "gsm8k|rtn4|694", "task": "gsm8k", "model": "rtn4", "id": "694", "label": "conceptual", "source": "judge", "reason": "Misinterpreted needed chairs, subtracted high chairs from total"}
+{"key": "gsm8k|rtn4|697", "task": "gsm8k", "model": "rtn4", "id": "697", "label": "conceptual", "source": "judge", "reason": "Added extra generation, misread hierarchy"}
+{"key": "gsm8k|rtn4|7", "task": "gsm8k", "model": "rtn4", "id": "7", "label": "conceptual", "source": "judge", "reason": "Assumed continuation of remaining 120\u202fGB after restart"}
+{"key": "gsm8k|rtn4|700", "task": "gsm8k", "model": "rtn4", "id": "700", "label": "conceptual", "source": "judge", "reason": "Ignored 40% visibility factor for city fireworks"}
+{"key": "gsm8k|rtn4|707", "task": "gsm8k", "model": "rtn4", "id": "707", "label": "conceptual", "source": "judge", "reason": "Incorrectly subtracted percentages instead of multiplying"}
+{"key": "gsm8k|rtn4|724", "task": "gsm8k", "model": "rtn4", "id": "724", "label": "conceptual", "source": "judge", "reason": "Counted only 3 people instead of 5"}
+{"key": "gsm8k|rtn4|731", "task": "gsm8k", "model": "rtn4", "id": "731", "label": "conceptual", "source": "judge", "reason": "Divided smores by sleeves per box, missing 8 per sleeve"}
+{"key": "gsm8k|rtn4|739", "task": "gsm8k", "model": "rtn4", "id": "739", "label": "conceptual", "source": "judge", "reason": "Wrong relation for half\u2011gallon price"}
+{"key": "gsm8k|rtn4|757", "task": "gsm8k", "model": "rtn4", "id": "757", "label": "execution", "source": "judge", "reason": "Added numbers incorrectly, got 73 instead of 75"}
+{"key": "gsm8k|rtn4|760", "task": "gsm8k", "model": "rtn4", "id": "760", "label": "conceptual", "source": "judge", "reason": "Used 60% for horse #12 instead of horse #7"}
+{"key": "gsm8k|rtn4|761", "task": "gsm8k", "model": "rtn4", "id": "761", "label": "method", "source": "judge", "reason": "Used wrong factor for two\u2011thirds relationship"}
+{"key": "gsm8k|rtn4|763", "task": "gsm8k", "model": "rtn4", "id": "763", "label": "method", "source": "judge", "reason": "Incorrect algebraic simplification of terms"}
+{"key": "gsm8k|rtn4|765", "task": "gsm8k", "model": "rtn4", "id": "765", "label": "execution", "source": "judge", "reason": "Omitted adding bananas to total fruit count"}
+{"key": "gsm8k|rtn4|770", "task": "gsm8k", "model": "rtn4", "id": "770", "label": "conceptual", "source": "judge", "reason": "Ignored multiple scent varieties; used single counts"}
+{"key": "gsm8k|rtn4|784", "task": "gsm8k", "model": "rtn4", "id": "784", "label": "conceptual", "source": "judge", "reason": "Forgot round\u2011trip distance"}
+{"key": "gsm8k|rtn4|785", "task": "gsm8k", "model": "rtn4", "id": "785", "label": "conceptual", "source": "judge", "reason": "Ignored 3/5 spending condition"}
+{"key": "gsm8k|rtn4|788", "task": "gsm8k", "model": "rtn4", "id": "788", "label": "conceptual", "source": "judge", "reason": "Ignored John's $50 when computing missing amount"}
+{"key": "gsm8k|rtn4|791", "task": "gsm8k", "model": "rtn4", "id": "791", "label": "conceptual", "source": "judge", "reason": "Omits second stop subtraction"}
+{"key": "gsm8k|rtn4|793", "task": "gsm8k", "model": "rtn4", "id": "793", "label": "conceptual", "source": "judge", "reason": "Counted only 1 overtime hour instead of 3"}
+{"key": "gsm8k|rtn4|798", "task": "gsm8k", "model": "rtn4", "id": "798", "label": "conceptual", "source": "judge", "reason": "Misread Sally\u2019s salary as after raise"}
+{"key": "gsm8k|rtn4|801", "task": "gsm8k", "model": "rtn4", "id": "801", "label": "conceptual", "source": "judge", "reason": "Counted only 3 teachers total, ignored per\u2011class teachers"}
+{"key": "gsm8k|rtn4|808", "task": "gsm8k", "model": "rtn4", "id": "808", "label": "reasoning", "source": "judge", "reason": "Incorrectly subtracted consumption from leftover, flawed logic"}
+{"key": "gsm8k|rtn4|810", "task": "gsm8k", "model": "rtn4", "id": "810", "label": "conceptual", "source": "judge", "reason": "Skipped first month doubling, resulting in 160 not 320"}
+{"key": "gsm8k|rtn4|821", "task": "gsm8k", "model": "rtn4", "id": "821", "label": "conceptual", "source": "judge", "reason": "Halved initial 50 instead of 70 after first break"}
+{"key": "gsm8k|rtn4|828", "task": "gsm8k", "model": "rtn4", "id": "828", "label": "execution", "source": "judge", "reason": "Added costs to total then subtracted incorrectly"}
+{"key": "gsm8k|rtn4|833", "task": "gsm8k", "model": "rtn4", "id": "833", "label": "conceptual", "source": "judge", "reason": "Misidentified h as Pompei height, ignored Saskay factor"}
+{"key": "gsm8k|rtn4|870", "task": "gsm8k", "model": "rtn4", "id": "870", "label": "conceptual", "source": "judge", "reason": "Ignored Madeline's 60% share"}
+{"key": "gsm8k|rtn4|887", "task": "gsm8k", "model": "rtn4", "id": "887", "label": "conceptual", "source": "judge", "reason": "Misinterpreted 2/3 of nesting birds, introduced unknown x"}
+{"key": "gsm8k|rtn4|891", "task": "gsm8k", "model": "rtn4", "id": "891", "label": "conceptual", "source": "judge", "reason": "Reversed faster\u2011than relationship between objects"}
+{"key": "gsm8k|rtn4|900", "task": "gsm8k", "model": "rtn4", "id": "900", "label": "conceptual", "source": "judge", "reason": "Ignored yesterday totals, compared only today's pages"}
+{"key": "gsm8k|rtn4|901", "task": "gsm8k", "model": "rtn4", "id": "901", "label": "conceptual", "source": "judge", "reason": "Misinterpreted pot capacity, added adult and child bowls"}
+{"key": "gsm8k|rtn4|909", "task": "gsm8k", "model": "rtn4", "id": "909", "label": "conceptual", "source": "judge", "reason": "Misinterpreted equation; used current age instead of age four years ago"}
+{"key": "gsm8k|rtn4|922", "task": "gsm8k", "model": "rtn4", "id": "922", "label": "conceptual", "source": "judge", "reason": "Treated shells per month as per year"}
+{"key": "gsm8k|rtn4|931", "task": "gsm8k", "model": "rtn4", "id": "931", "label": "conceptual", "source": "judge", "reason": "Misdefined variables, confused ages of Peter and Jean"}
+{"key": "gsm8k|rtn4|935", "task": "gsm8k", "model": "rtn4", "id": "935", "label": "execution", "source": "judge", "reason": "Incorrect multiplication of 60*24*30"}
+{"key": "gsm8k|rtn4|940", "task": "gsm8k", "model": "rtn4", "id": "940", "label": "conceptual", "source": "judge", "reason": "Ignored the 5 schools, used only 7 rows"}
+{"key": "gsm8k|rtn4|951", "task": "gsm8k", "model": "rtn4", "id": "951", "label": "conceptual", "source": "judge", "reason": "Missed double\u2011sided page factor"}
+{"key": "gsm8k|rtn4|967", "task": "gsm8k", "model": "rtn4", "id": "967", "label": "execution", "source": "judge", "reason": "Incorrect addition of ages"}
+{"key": "gsm8k|rtn4|969", "task": "gsm8k", "model": "rtn4", "id": "969", "label": "conceptual", "source": "judge", "reason": "Omitted one half\u2011price phone, misread quantity"}
+{"key": "gsm8k|rtn4|973", "task": "gsm8k", "model": "rtn4", "id": "973", "label": "conceptual", "source": "judge", "reason": "Ignored known USA state count"}
+{"key": "gsm8k|rtn4|976", "task": "gsm8k", "model": "rtn4", "id": "976", "label": "conceptual", "source": "judge", "reason": "Used wrong number for Sunday apple pies"}
+{"key": "gsm8k|rtn4|990", "task": "gsm8k", "model": "rtn4", "id": "990", "label": "reasoning", "source": "judge", "reason": "Incorrect sign when expressing difference, final answer contradicts work"}
+{"key": "gsm8k|rtn4|991", "task": "gsm8k", "model": "rtn4", "id": "991", "label": "conceptual", "source": "judge", "reason": "Misinterpreted 3\u00d7father age as 3\u00d7Bill's first age"}
+{"key": "gsm8k|rtn4|992", "task": "gsm8k", "model": "rtn4", "id": "992", "label": "conceptual", "source": "judge", "reason": "Misinterpreted quarterly check frequency"}
+{"key": "gsm8k|rtn4|995", "task": "gsm8k", "model": "rtn4", "id": "995", "label": "conceptual", "source": "judge", "reason": "Added parents' money instead of subtracting from cost"}
+{"key": "gsm8k|gptq4|1005", "task": "gsm8k", "model": "gptq4", "id": "1005", "label": "conceptual", "source": "judge", "reason": "Omitted original male porcupines in final total"}
+{"key": "gsm8k|gptq4|1009", "task": "gsm8k", "model": "gptq4", "id": "1009", "label": "conceptual", "source": "judge", "reason": "Misread female proportion over 16 as half"}
+{"key": "gsm8k|gptq4|1013", "task": "gsm8k", "model": "gptq4", "id": "1013", "label": "conceptual", "source": "judge", "reason": "Misinterpreted earnings per week vs per hour"}
+{"key": "gsm8k|gptq4|1014", "task": "gsm8k", "model": "gptq4", "id": "1014", "label": "conceptual", "source": "judge", "reason": "Used wrong price for pears ($0.75 instead of $0.5)."}
+{"key": "gsm8k|gptq4|1022", "task": "gsm8k", "model": "gptq4", "id": "1022", "label": "conceptual", "source": "judge", "reason": "Misinterpreted large price as 4/3 of small price"}
+{"key": "gsm8k|gptq4|1025", "task": "gsm8k", "model": "gptq4", "id": "1025", "label": "conceptual", "source": "judge", "reason": "Forgot the 10 eggs not found by friends"}
+{"key": "gsm8k|gptq4|1027", "task": "gsm8k", "model": "gptq4", "id": "1027", "label": "conceptual", "source": "judge", "reason": "Misinterpreted price per sandwich as total cost"}
+{"key": "gsm8k|gptq4|1047", "task": "gsm8k", "model": "gptq4", "id": "1047", "label": "conceptual", "source": "judge", "reason": "Reversed relationship between first and second sets"}
+{"key": "gsm8k|gptq4|1055", "task": "gsm8k", "model": "gptq4", "id": "1055", "label": "method", "source": "judge", "reason": "Added normal cost twice, wrong aggregation plan"}
+{"key": "gsm8k|gptq4|1056", "task": "gsm8k", "model": "gptq4", "id": "1056", "label": "conceptual", "source": "judge", "reason": "Assumed 4 sheets per bed, misread loads requirement"}
+{"key": "gsm8k|gptq4|106", "task": "gsm8k", "model": "gptq4", "id": "106", "label": "conceptual", "source": "judge", "reason": "Incorrect wall volume interpretation"}
+{"key": "gsm8k|gptq4|1063", "task": "gsm8k", "model": "gptq4", "id": "1063", "label": "conceptual", "source": "judge", "reason": "Misread % requiring response, used 20% instead of 80%"}
+{"key": "gsm8k|gptq4|1064", "task": "gsm8k", "model": "gptq4", "id": "1064", "label": "conceptual", "source": "judge", "reason": "Used three times Tuesday instead of Monday for Wednesday"}
+{"key": "gsm8k|gptq4|1066", "task": "gsm8k", "model": "gptq4", "id": "1066", "label": "conceptual", "source": "judge", "reason": "Misinterpreted total left formula, subtracting orders as well"}
+{"key": "gsm8k|gptq4|107", "task": "gsm8k", "model": "gptq4", "id": "107", "label": "degeneration", "source": "rule", "reason": ""}
+{"key": "gsm8k|gptq4|1074", "task": "gsm8k", "model": "gptq4", "id": "1074", "label": "degeneration", "source": "rule", "reason": ""}
+{"key": "gsm8k|gptq4|1080", "task": "gsm8k", "model": "gptq4", "id": "1080", "label": "execution", "source": "judge", "reason": "Incorrect seconds\u2011per\u2011hour conversion"}
+{"key": "gsm8k|gptq4|1086", "task": "gsm8k", "model": "gptq4", "id": "1086", "label": "conceptual", "source": "judge", "reason": "Mis\u2011set and solved variable for Trekking bikes."}
+{"key": "gsm8k|gptq4|1087", "task": "gsm8k", "model": "gptq4", "id": "1087", "label": "method", "source": "judge", "reason": "Added rates instead of subtracting truck pickups"}
+{"key": "gsm8k|gptq4|1096", "task": "gsm8k", "model": "gptq4", "id": "1096", "label": "conceptual", "source": "judge", "reason": "Ignored April days, used only March"}
+{"key": "gsm8k|gptq4|11", "task": "gsm8k", "model": "gptq4", "id": "11", "label": "execution", "source": "judge", "reason": "Addition error, 204+160+330 summed incorrectly"}
+{"key": "gsm8k|gptq4|1119", "task": "gsm8k", "model": "gptq4", "id": "1119", "label": "conceptual", "source": "judge", "reason": "Interpreted \"well over\" as +1 hour"}
+{"key": "gsm8k|gptq4|1129", "task": "gsm8k", "model": "gptq4", "id": "1129", "label": "conceptual", "source": "judge", "reason": "Ignored +12 in equation, solving S+S=30 incorrectly."}
+{"key": "gsm8k|gptq4|1130", "task": "gsm8k", "model": "gptq4", "id": "1130", "label": "conceptual", "source": "judge", "reason": "Ignored crayon weight"}
+{"key": "gsm8k|gptq4|1131", "task": "gsm8k", "model": "gptq4", "id": "1131", "label": "conceptual", "source": "judge", "reason": "Misread logs vs feet, swapped quantities"}
+{"key": "gsm8k|gptq4|1132", "task": "gsm8k", "model": "gptq4", "id": "1132", "label": "conceptual", "source": "judge", "reason": "Misread brother's salary relationship"}
+{"key": "gsm8k|gptq4|1138", "task": "gsm8k", "model": "gptq4", "id": "1138", "label": "execution", "source": "judge", "reason": "Arithmetic addition error, summed to 690 instead of 700"}
+{"key": "gsm8k|gptq4|1139", "task": "gsm8k", "model": "gptq4", "id": "1139", "label": "conceptual", "source": "judge", "reason": "Divided by 4 bags instead of 36 bagels"}
+{"key": "gsm8k|gptq4|114", "task": "gsm8k", "model": "gptq4", "id": "114", "label": "conceptual", "source": "judge", "reason": "Multiplied Jamal's capacity by 50, reversed relationship"}
+{"key": "gsm8k|gptq4|1146", "task": "gsm8k", "model": "gptq4", "id": "1146", "label": "method", "source": "judge", "reason": "Used wrong loss formula"}
+{"key": "gsm8k|gptq4|1152", "task": "gsm8k", "model": "gptq4", "id": "1152", "label": "conceptual", "source": "judge", "reason": "Misread 3\u00d7 chance as 300% probability"}
+{"key": "gsm8k|gptq4|116", "task": "gsm8k", "model": "gptq4", "id": "116", "label": "conceptual", "source": "judge", "reason": "Misread total as only sugar, ignored water quantity"}
+{"key": "gsm8k|gptq4|1166", "task": "gsm8k", "model": "gptq4", "id": "1166", "label": "conceptual", "source": "judge", "reason": "Did not substitute initial fruit count (50)"}
+{"key": "gsm8k|gptq4|1170", "task": "gsm8k", "model": "gptq4", "id": "1170", "label": "conceptual", "source": "judge", "reason": "Assumed equal share among four colors, ignoring half yellow"}
+{"key": "gsm8k|gptq4|1183", "task": "gsm8k", "model": "gptq4", "id": "1183", "label": "conceptual", "source": "judge", "reason": "Miscounted apples, added thrown apple to totals"}
+{"key": "gsm8k|gptq4|1193", "task": "gsm8k", "model": "gptq4", "id": "1193", "label": "conceptual", "source": "judge", "reason": "Assumed weekly rates instead of given counts"}
+{"key": "gsm8k|gptq4|1195", "task": "gsm8k", "model": "gptq4", "id": "1195", "label": "conceptual", "source": "judge", "reason": "Used wrong base for evening multiplier"}
+{"key": "gsm8k|gptq4|1198", "task": "gsm8k", "model": "gptq4", "id": "1198", "label": "conceptual", "source": "judge", "reason": "Interpreted \"1/4 more\" as \"1/4 of\""}
+{"key": "gsm8k|gptq4|1207", "task": "gsm8k", "model": "gptq4", "id": "1207", "label": "execution", "source": "judge", "reason": "Added tuna weights incorrectly, got 138 kg"}
+{"key": "gsm8k|gptq4|1209", "task": "gsm8k", "model": "gptq4", "id": "1209", "label": "execution", "source": "judge", "reason": "Incorrect addition of 3+6+20"}
+{"key": "gsm8k|gptq4|1212", "task": "gsm8k", "model": "gptq4", "id": "1212", "label": "conceptual", "source": "judge", "reason": "Ignored John\u2019s second class"}
+{"key": "gsm8k|gptq4|1214", "task": "gsm8k", "model": "gptq4", "id": "1214", "label": "conceptual", "source": "judge", "reason": "Added wife's changes instead of subtracting"}
+{"key": "gsm8k|gptq4|1218", "task": "gsm8k", "model": "gptq4", "id": "1218", "label": "conceptual", "source": "judge", "reason": "Counted 3 grades instead of 4, misreading total students"}
+{"key": "gsm8k|gptq4|1231", "task": "gsm8k", "model": "gptq4", "id": "1231", "label": "execution", "source": "judge", "reason": "Incorrect sum and count of scores"}
+{"key": "gsm8k|gptq4|1239", "task": "gsm8k", "model": "gptq4", "id": "1239", "label": "conceptual", "source": "judge", "reason": "Mixed minutes with hours, ignored unit consistency"}
+{"key": "gsm8k|gptq4|1243", "task": "gsm8k", "model": "gptq4", "id": "1243", "label": "method", "source": "judge", "reason": "Applied $3 discount per stick instead of per bag"}
+{"key": "gsm8k|gptq4|1244", "task": "gsm8k", "model": "gptq4", "id": "1244", "label": "conceptual", "source": "judge", "reason": "Used wrong total questions (60) instead of 110"}
+{"key": "gsm8k|gptq4|1251", "task": "gsm8k", "model": "gptq4", "id": "1251", "label": "conceptual", "source": "judge", "reason": "Misstates fifth side time and omits sixth side"}
+{"key": "gsm8k|gptq4|1258", "task": "gsm8k", "model": "gptq4", "id": "1258", "label": "conceptual", "source": "judge", "reason": "Reversed cost relationship between main and additional phones"}
+{"key": "gsm8k|gptq4|1264", "task": "gsm8k", "model": "gptq4", "id": "1264", "label": "degeneration", "source": "rule", "reason": ""}
+{"key": "gsm8k|gptq4|1271", "task": "gsm8k", "model": "gptq4", "id": "1271", "label": "execution", "source": "judge", "reason": "Incorrect addition leading to wrong subtraction"}
+{"key": "gsm8k|gptq4|1272", "task": "gsm8k", "model": "gptq4", "id": "1272", "label": "conceptual", "source": "judge", "reason": "Ignored 3 nights, used one-night cost"}
+{"key": "gsm8k|gptq4|128", "task": "gsm8k", "model": "gptq4", "id": "128", "label": "execution", "source": "judge", "reason": "Incorrect addition of component totals"}
+{"key": "gsm8k|gptq4|1292", "task": "gsm8k", "model": "gptq4", "id": "1292", "label": "conceptual", "source": "judge", "reason": "Reversed Jackie\u2019s relation to Anne"}
+{"key": "gsm8k|gptq4|1294", "task": "gsm8k", "model": "gptq4", "id": "1294", "label": "conceptual", "source": "judge", "reason": "Misapplied BOGO 50% off to both shirts"}
+{"key": "gsm8k|gptq4|1300", "task": "gsm8k", "model": "gptq4", "id": "1300", "label": "conceptual", "source": "judge", "reason": "Counted 6 workdays per week, not 5"}
+{"key": "gsm8k|gptq4|1306", "task": "gsm8k", "model": "gptq4", "id": "1306", "label": "conceptual", "source": "judge", "reason": "Misread Petri dish condition"}
+{"key": "gsm8k|gptq4|1314", "task": "gsm8k", "model": "gptq4", "id": "1314", "label": "conceptual", "source": "judge", "reason": "Incorrect age calculation for youngest son"}
+{"key": "gsm8k|gptq4|135", "task": "gsm8k", "model": "gptq4", "id": "135", "label": "conceptual", "source": "judge", "reason": "Ignored the 5-game loss before comparison"}
+{"key": "gsm8k|gptq4|138", "task": "gsm8k", "model": "gptq4", "id": "138", "label": "conceptual", "source": "judge", "reason": "Ignores rate and time, assumes all questions attempted"}
+{"key": "gsm8k|gptq4|14", "task": "gsm8k", "model": "gptq4", "id": "14", "label": "conceptual", "source": "judge", "reason": "Incorrectly applied percentages to compute hip\u2011hop share."}
+{"key": "gsm8k|gptq4|144", "task": "gsm8k", "model": "gptq4", "id": "144", "label": "conceptual", "source": "judge", "reason": "Misread bleach cost per bottle, wrong per-client expense"}
+{"key": "gsm8k|gptq4|148", "task": "gsm8k", "model": "gptq4", "id": "148", "label": "method", "source": "judge", "reason": "Used wrong equation, subtracted change instead of adding"}
+{"key": "gsm8k|gptq4|153", "task": "gsm8k", "model": "gptq4", "id": "153", "label": "degeneration", "source": "rule", "reason": ""}
+{"key": "gsm8k|gptq4|156", "task": "gsm8k", "model": "gptq4", "id": "156", "label": "execution", "source": "judge", "reason": "Added totals incorrectly"}
+{"key": "gsm8k|gptq4|157", "task": "gsm8k", "model": "gptq4", "id": "157", "label": "conceptual", "source": "judge", "reason": "Used 100\u202fyd per round trip and ignored 34 extra runs"}
+{"key": "gsm8k|gptq4|164", "task": "gsm8k", "model": "gptq4", "id": "164", "label": "conceptual", "source": "judge", "reason": "Misread lost hours (used 1 instead of 3)"}
+{"key": "gsm8k|gptq4|172", "task": "gsm8k", "model": "gptq4", "id": "172", "label": "conceptual", "source": "judge", "reason": "Misinterpreted Sally Two relation, used wrong reference"}
+{"key": "gsm8k|gptq4|175", "task": "gsm8k", "model": "gptq4", "id": "175", "label": "conceptual", "source": "judge", "reason": "Misinterpreted sugar cost as total $2 instead of per gallon"}
+{"key": "gsm8k|gptq4|18", "task": "gsm8k", "model": "gptq4", "id": "18", "label": "conceptual", "source": "judge", "reason": "Converted omelets to dozens without accounting eggs per omelet"}
+{"key": "gsm8k|gptq4|189", "task": "gsm8k", "model": "gptq4", "id": "189", "label": "execution", "source": "judge", "reason": "Added costs incorrectly, getting $92 instead of $102"}
+{"key": "gsm8k|gptq4|19", "task": "gsm8k", "model": "gptq4", "id": "19", "label": "method", "source": "judge", "reason": "Used wrong plan to compute required speed"}
+{"key": "gsm8k|gptq4|199", "task": "gsm8k", "model": "gptq4", "id": "199", "label": "conceptual", "source": "judge", "reason": "Assumed each publisher gets all 1000 sentences"}
+{"key": "gsm8k|gptq4|2", "task": "gsm8k", "model": "gptq4", "id": "2", "label": "conceptual", "source": "judge", "reason": "Misinterpreted 150% increase and subtracted wrong cost"}
+{"key": "gsm8k|gptq4|20", "task": "gsm8k", "model": "gptq4", "id": "20", "label": "execution", "source": "judge", "reason": "Subtracted whole liter instead of 2/3 liter water"}
+{"key": "gsm8k|gptq4|22", "task": "gsm8k", "model": "gptq4", "id": "22", "label": "conceptual", "source": "judge", "reason": "Misread second group total DVDs as 2 instead of 4"}
+{"key": "gsm8k|gptq4|227", "task": "gsm8k", "model": "gptq4", "id": "227", "label": "conceptual", "source": "judge", "reason": "Omitted the $3 upgrade cost"}
+{"key": "gsm8k|gptq4|233", "task": "gsm8k", "model": "gptq4", "id": "233", "label": "conceptual", "source": "judge", "reason": "Misapplied second one-third to remaining penguins"}
+{"key": "gsm8k|gptq4|25", "task": "gsm8k", "model": "gptq4", "id": "25", "label": "execution", "source": "judge", "reason": "Subtraction error (50\u201133 gave 8)"}
+{"key": "gsm8k|gptq4|261", "task": "gsm8k", "model": "gptq4", "id": "261", "label": "conceptual", "source": "judge", "reason": "Incorrect penny\u2011to\u2011dollar conversion"}
+{"key": "gsm8k|gptq4|264", "task": "gsm8k", "model": "gptq4", "id": "264", "label": "execution", "source": "judge", "reason": "Correct amounts, added to 300 instead of 400"}
+{"key": "gsm8k|gptq4|272", "task": "gsm8k", "model": "gptq4", "id": "272", "label": "execution", "source": "judge", "reason": "Added costs incorrectly"}
+{"key": "gsm8k|gptq4|275", "task": "gsm8k", "model": "gptq4", "id": "275", "label": "conceptual", "source": "judge", "reason": "Counted total scene lines instead of his lines"}
+{"key": "gsm8k|gptq4|276", "task": "gsm8k", "model": "gptq4", "id": "276", "label": "conceptual", "source": "judge", "reason": "Ignored 5/8 fraction for C, treated all remaining as C"}
+{"key": "gsm8k|gptq4|282", "task": "gsm8k", "model": "gptq4", "id": "282", "label": "conceptual", "source": "judge", "reason": "Missed multiplying guests by 2"}
+{"key": "gsm8k|gptq4|289", "task": "gsm8k", "model": "gptq4", "id": "289", "label": "conceptual", "source": "judge", "reason": "Returned time difference instead of slow lane time"}
+{"key": "gsm8k|gptq4|290", "task": "gsm8k", "model": "gptq4", "id": "290", "label": "conceptual", "source": "judge", "reason": "Misinterpreted \u201c10 times less\u201d relationship"}
+{"key": "gsm8k|gptq4|304", "task": "gsm8k", "model": "gptq4", "id": "304", "label": "conceptual", "source": "judge", "reason": "Used days as weeks, misread schedule"}
+{"key": "gsm8k|gptq4|315", "task": "gsm8k", "model": "gptq4", "id": "315", "label": "conceptual", "source": "judge", "reason": "Treats previous commitments as subtraction from ill count"}
+{"key": "gsm8k|gptq4|320", "task": "gsm8k", "model": "gptq4", "id": "320", "label": "degeneration", "source": "rule", "reason": ""}
+{"key": "gsm8k|gptq4|323", "task": "gsm8k", "model": "gptq4", "id": "323", "label": "conceptual", "source": "judge", "reason": "Treats each degree as weakening instead of per ice cube"}
+{"key": "gsm8k|gptq4|324", "task": "gsm8k", "model": "gptq4", "id": "324", "label": "conceptual", "source": "judge", "reason": "Assumed each person brought exactly 2 old records"}
+{"key": "gsm8k|gptq4|331", "task": "gsm8k", "model": "gptq4", "id": "331", "label": "conceptual", "source": "judge", "reason": "Treated yearly salary as hourly wage"}
+{"key": "gsm8k|gptq4|339", "task": "gsm8k", "model": "gptq4", "id": "339", "label": "method", "source": "judge", "reason": "Used incorrect legs formula"}
+{"key": "gsm8k|gptq4|341", "task": "gsm8k", "model": "gptq4", "id": "341", "label": "execution", "source": "judge", "reason": "Arithmetic error adding container weight"}
+{"key": "gsm8k|gptq4|346", "task": "gsm8k", "model": "gptq4", "id": "346", "label": "conceptual", "source": "judge", "reason": "Misread son's cookies as 4 total instead of 20"}
+{"key": "gsm8k|gptq4|358", "task": "gsm8k", "model": "gptq4", "id": "358", "label": "degeneration", "source": "rule", "reason": ""}
+{"key": "gsm8k|gptq4|361", "task": "gsm8k", "model": "gptq4", "id": "361", "label": "conceptual", "source": "judge", "reason": "Misread third-leg distance, used wrong value"}
+{"key": "gsm8k|gptq4|367", "task": "gsm8k", "model": "gptq4", "id": "367", "label": "execution", "source": "judge", "reason": "Incorrect algebraic solving of equation"}
+{"key": "gsm8k|gptq4|371", "task": "gsm8k", "model": "gptq4", "id": "371", "label": "conceptual", "source": "judge", "reason": "Ignored the 6 returned pairs"}
+{"key": "gsm8k|gptq4|378", "task": "gsm8k", "model": "gptq4", "id": "378", "label": "conceptual", "source": "judge", "reason": "Counted each pair as one sock"}
+{"key": "gsm8k|gptq4|383", "task": "gsm8k", "model": "gptq4", "id": "383", "label": "conceptual", "source": "judge", "reason": "Used cost per pitcher instead of total cost"}
+{"key": "gsm8k|gptq4|385", "task": "gsm8k", "model": "gptq4", "id": "385", "label": "conceptual", "source": "judge", "reason": "Misinterpreted total female members"}
+{"key": "gsm8k|gptq4|39", "task": "gsm8k", "model": "gptq4", "id": "39", "label": "degeneration", "source": "judge", "reason": "No numeric final answer, left expression 6t"}
+{"key": "gsm8k|gptq4|394", "task": "gsm8k", "model": "gptq4", "id": "394", "label": "conceptual", "source": "judge", "reason": "Double\u2011counted rows, total books incorrect"}
+{"key": "gsm8k|gptq4|401", "task": "gsm8k", "model": "gptq4", "id": "401", "label": "method", "source": "judge", "reason": "Multiplied days by monthly earnings instead of $50"}
+{"key": "gsm8k|gptq4|410", "task": "gsm8k", "model": "gptq4", "id": "410", "label": "conceptual", "source": "judge", "reason": "Misinterpreted taffy sale, treated 2\u202flb as $3 total"}
+{"key": "gsm8k|gptq4|414", "task": "gsm8k", "model": "gptq4", "id": "414", "label": "conceptual", "source": "judge", "reason": "Ignored discount, used regular price only"}
+{"key": "gsm8k|gptq4|415", "task": "gsm8k", "model": "gptq4", "id": "415", "label": "conceptual", "source": "judge", "reason": "Misinterpreted average trees amount as T\u2011S"}
+{"key": "gsm8k|gptq4|425", "task": "gsm8k", "model": "gptq4", "id": "425", "label": "conceptual", "source": "judge", "reason": "Misidentified own-made feeders count and birds per feeder"}
+{"key": "gsm8k|gptq4|436", "task": "gsm8k", "model": "gptq4", "id": "436", "label": "conceptual", "source": "judge", "reason": "Ignored 8 pieces, used only 2 pieces"}
+{"key": "gsm8k|gptq4|438", "task": "gsm8k", "model": "gptq4", "id": "438", "label": "conceptual", "source": "judge", "reason": "Omitted beef stock cost"}
+{"key": "gsm8k|gptq4|446", "task": "gsm8k", "model": "gptq4", "id": "446", "label": "conceptual", "source": "judge", "reason": "Assumed each tray holds 5 eggs instead of 25"}
+{"key": "gsm8k|gptq4|466", "task": "gsm8k", "model": "gptq4", "id": "466", "label": "conceptual", "source": "judge", "reason": "Ignored Becky's $1 discount"}
+{"key": "gsm8k|gptq4|467", "task": "gsm8k", "model": "gptq4", "id": "467", "label": "conceptual", "source": "judge", "reason": "Misinterpreted comforter count as 2s"}
+{"key": "gsm8k|gptq4|468", "task": "gsm8k", "model": "gptq4", "id": "468", "label": "conceptual", "source": "judge", "reason": "Misread 'gets rid of' as gaining shoes"}
+{"key": "gsm8k|gptq4|475", "task": "gsm8k", "model": "gptq4", "id": "475", "label": "method", "source": "judge", "reason": "Used wrong formula dividing minutes by days per week"}
+{"key": "gsm8k|gptq4|479", "task": "gsm8k", "model": "gptq4", "id": "479", "label": "conceptual", "source": "judge", "reason": "Omitted 20% hotel surcharge, used normal price only"}
+{"key": "gsm8k|gptq4|483", "task": "gsm8k", "model": "gptq4", "id": "483", "label": "method", "source": "judge", "reason": "Subtracted Gabriel's songs instead of his add capacity"}
+{"key": "gsm8k|gptq4|500", "task": "gsm8k", "model": "gptq4", "id": "500", "label": "degeneration", "source": "rule", "reason": ""}
+{"key": "gsm8k|gptq4|504", "task": "gsm8k", "model": "gptq4", "id": "504", "label": "conceptual", "source": "judge", "reason": "Counted two strawberry packs as one"}
+{"key": "gsm8k|gptq4|52", "task": "gsm8k", "model": "gptq4", "id": "52", "label": "conceptual", "source": "judge", "reason": "Misread total removal weight as comic weight"}
+{"key": "gsm8k|gptq4|53", "task": "gsm8k", "model": "gptq4", "id": "53", "label": "conceptual", "source": "judge", "reason": "Omitted car tire revenue on Thursday"}
+{"key": "gsm8k|gptq4|531", "task": "gsm8k", "model": "gptq4", "id": "531", "label": "execution", "source": "judge", "reason": "Subtracted 40 from 8 incorrectly for net change"}
+{"key": "gsm8k|gptq4|532", "task": "gsm8k", "model": "gptq4", "id": "532", "label": "conceptual", "source": "judge", "reason": "Used cousin's future age instead of current age for difference."}
+{"key": "gsm8k|gptq4|540", "task": "gsm8k", "model": "gptq4", "id": "540", "label": "conceptual", "source": "judge", "reason": "Misread initial share as $18 instead of $6"}
+{"key": "gsm8k|gptq4|550", "task": "gsm8k", "model": "gptq4", "id": "550", "label": "execution", "source": "judge", "reason": "Added costs incorrectly, got $20 instead of $30"}
+{"key": "gsm8k|gptq4|554", "task": "gsm8k", "model": "gptq4", "id": "554", "label": "method", "source": "judge", "reason": "Computed per\u2011mile difference, not 3\u2011mile total"}
+{"key": "gsm8k|gptq4|567", "task": "gsm8k", "model": "gptq4", "id": "567", "label": "execution", "source": "judge", "reason": "Incorrect arithmetic for half\u2011price calculation"}
+{"key": "gsm8k|gptq4|569", "task": "gsm8k", "model": "gptq4", "id": "569", "label": "conceptual", "source": "judge", "reason": "Swapped Liam and Mitchell's sales information"}
+{"key": "gsm8k|gptq4|570", "task": "gsm8k", "model": "gptq4", "id": "570", "label": "conceptual", "source": "judge", "reason": "Assumed all $70 spent on wooden figures, ignored daily limit"}
+{"key": "gsm8k|gptq4|576", "task": "gsm8k", "model": "gptq4", "id": "576", "label": "execution", "source": "judge", "reason": "Arithmetic error in installation cost multiplication"}
+{"key": "gsm8k|gptq4|578", "task": "gsm8k", "model": "gptq4", "id": "578", "label": "conceptual", "source": "judge", "reason": "Multiplied by 20 instead of (20\u201112)=8"}
+{"key": "gsm8k|gptq4|58", "task": "gsm8k", "model": "gptq4", "id": "58", "label": "conceptual", "source": "judge", "reason": "Misidentified 25% fee as delivery fee"}
+{"key": "gsm8k|gptq4|584", "task": "gsm8k", "model": "gptq4", "id": "584", "label": "conceptual", "source": "judge", "reason": "Ignored 10% discount on box price"}
+{"key": "gsm8k|gptq4|585", "task": "gsm8k", "model": "gptq4", "id": "585", "label": "conceptual", "source": "judge", "reason": "Used wrong multiplier for John's Saturday hours"}
+{"key": "gsm8k|gptq4|586", "task": "gsm8k", "model": "gptq4", "id": "586", "label": "conceptual", "source": "judge", "reason": "Used wrong water\u2011per\u2011calorie ratio"}
+{"key": "gsm8k|gptq4|602", "task": "gsm8k", "model": "gptq4", "id": "602", "label": "execution", "source": "judge", "reason": "Incorrect division 1200\u00f73 gave 40 instead of 400"}
+{"key": "gsm8k|gptq4|619", "task": "gsm8k", "model": "gptq4", "id": "619", "label": "conceptual", "source": "judge", "reason": "Misread poles per intersection, used 4 lights only"}
+{"key": "gsm8k|gptq4|620", "task": "gsm8k", "model": "gptq4", "id": "620", "label": "conceptual", "source": "judge", "reason": "Ignored 1000\u2011play limit, summed played counts directly"}
+{"key": "gsm8k|gptq4|621", "task": "gsm8k", "model": "gptq4", "id": "621", "label": "conceptual", "source": "judge", "reason": "Treated hourly rate as per session"}
+{"key": "gsm8k|gptq4|63", "task": "gsm8k", "model": "gptq4", "id": "63", "label": "execution", "source": "judge", "reason": "Incorrect addition of 840 and 756"}
+{"key": "gsm8k|gptq4|630", "task": "gsm8k", "model": "gptq4", "id": "630", "label": "conceptual", "source": "judge", "reason": "Subtracted wrong group, misinterpreted men count"}
+{"key": "gsm8k|gptq4|648", "task": "gsm8k", "model": "gptq4", "id": "648", "label": "conceptual", "source": "judge", "reason": "Omitted teacher from count"}
+{"key": "gsm8k|gptq4|652", "task": "gsm8k", "model": "gptq4", "id": "652", "label": "method", "source": "judge", "reason": "Used exponential cost instead of constant double of first hour"}
+{"key": "gsm8k|gptq4|653", "task": "gsm8k", "model": "gptq4", "id": "653", "label": "conceptual", "source": "judge", "reason": "Misinterpreted withheld amount and divided by wage"}
+{"key": "gsm8k|gptq4|657", "task": "gsm8k", "model": "gptq4", "id": "657", "label": "conceptual", "source": "judge", "reason": "Ignored plane purchase"}
+{"key": "gsm8k|gptq4|66", "task": "gsm8k", "model": "gptq4", "id": "66", "label": "execution", "source": "judge", "reason": "Correct counts but added to 50 instead of 48"}
+{"key": "gsm8k|gptq4|666", "task": "gsm8k", "model": "gptq4", "id": "666", "label": "conceptual", "source": "judge", "reason": "Misinterpreted relationships and names"}
+{"key": "gsm8k|gptq4|681", "task": "gsm8k", "model": "gptq4", "id": "681", "label": "conceptual", "source": "judge", "reason": "Omitted Summer's cookies from total"}
+{"key": "gsm8k|gptq4|692", "task": "gsm8k", "model": "gptq4", "id": "692", "label": "conceptual", "source": "judge", "reason": "Uses wrong price for banana and orange"}
+{"key": "gsm8k|gptq4|7", "task": "gsm8k", "model": "gptq4", "id": "7", "label": "conceptual", "source": "judge", "reason": "Ignored 40% progress, assumed full download twice"}
+{"key": "gsm8k|gptq4|707", "task": "gsm8k", "model": "gptq4", "id": "707", "label": "reasoning", "source": "judge", "reason": "Incorrectly added percentages instead of multiplying"}
+{"key": "gsm8k|gptq4|710", "task": "gsm8k", "model": "gptq4", "id": "710", "label": "degeneration", "source": "rule", "reason": ""}
+{"key": "gsm8k|gptq4|725", "task": "gsm8k", "model": "gptq4", "id": "725", "label": "conceptual", "source": "judge", "reason": "Averaged per\u2011sausage times instead of total times"}
+{"key": "gsm8k|gptq4|726", "task": "gsm8k", "model": "gptq4", "id": "726", "label": "conceptual", "source": "judge", "reason": "Set up wrong equation, used 100 instead of 10 inches"}
+{"key": "gsm8k|gptq4|729", "task": "gsm8k", "model": "gptq4", "id": "729", "label": "conceptual", "source": "judge", "reason": "Assumed all 5000 voted by 8:00"}
+{"key": "gsm8k|gptq4|737", "task": "gsm8k", "model": "gptq4", "id": "737", "label": "execution", "source": "judge", "reason": "Incorrect multiplication for small cubes water"}
+{"key": "gsm8k|gptq4|740", "task": "gsm8k", "model": "gptq4", "id": "740", "label": "execution", "source": "judge", "reason": "Arithmetic subtraction error"}
+{"key": "gsm8k|gptq4|743", "task": "gsm8k", "model": "gptq4", "id": "743", "label": "method", "source": "judge", "reason": "Used addition instead of multiplication for tripling"}
+{"key": "gsm8k|gptq4|761", "task": "gsm8k", "model": "gptq4", "id": "761", "label": "method", "source": "judge", "reason": "Used wrong relationship (\u00d72 instead of \u00d73/2)"}
+{"key": "gsm8k|gptq4|763", "task": "gsm8k", "model": "gptq4", "id": "763", "label": "conceptual", "source": "judge", "reason": "Misread which house is half of which."}
+{"key": "gsm8k|gptq4|765", "task": "gsm8k", "model": "gptq4", "id": "765", "label": "conceptual", "source": "judge", "reason": "Treated 45% more as 45% of bananas only"}
+{"key": "gsm8k|gptq4|770", "task": "gsm8k", "model": "gptq4", "id": "770", "label": "conceptual", "source": "judge", "reason": "Ignored number of scent types"}
+{"key": "gsm8k|gptq4|793", "task": "gsm8k", "model": "gptq4", "id": "793", "label": "method", "source": "judge", "reason": "Applied regular rate to all hours"}
+{"key": "gsm8k|gptq4|798", "task": "gsm8k", "model": "gptq4", "id": "798", "label": "conceptual", "source": "judge", "reason": "Ignored Billy's $1 raise, misread final wage"}
+{"key": "gsm8k|gptq4|801", "task": "gsm8k", "model": "gptq4", "id": "801", "label": "conceptual", "source": "judge", "reason": "Counted only 3 teachers total, ignored 40 classes"}
+{"key": "gsm8k|gptq4|802", "task": "gsm8k", "model": "gptq4", "id": "802", "label": "method", "source": "judge", "reason": "Used wrong equation for 30% of total"}
+{"key": "gsm8k|gptq4|825", "task": "gsm8k", "model": "gptq4", "id": "825", "label": "degeneration", "source": "rule", "reason": ""}
+{"key": "gsm8k|gptq4|830", "task": "gsm8k", "model": "gptq4", "id": "830", "label": "execution", "source": "judge", "reason": "Multiplication error: 282\u202f\u00d7\u202f4 gave 1088 instead of 1128"}
+{"key": "gsm8k|gptq4|839", "task": "gsm8k", "model": "gptq4", "id": "839", "label": "conceptual", "source": "judge", "reason": "Misinterpreted question, gave total cows instead of needed cows"}
+{"key": "gsm8k|gptq4|847", "task": "gsm8k", "model": "gptq4", "id": "847", "label": "conceptual", "source": "judge", "reason": "Misinterpreted interest rate as percent"}
+{"key": "gsm8k|gptq4|851", "task": "gsm8k", "model": "gptq4", "id": "851", "label": "execution", "source": "judge", "reason": "Correct setup, arithmetic division error (2640/24 miscalculated)"}
+{"key": "gsm8k|gptq4|857", "task": "gsm8k", "model": "gptq4", "id": "857", "label": "reasoning", "source": "judge", "reason": "Final total contradicts earlier calculation"}
+{"key": "gsm8k|gptq4|870", "task": "gsm8k", "model": "gptq4", "id": "870", "label": "conceptual", "source": "judge", "reason": "Assumed equal split, ignored 60% share"}
+{"key": "gsm8k|gptq4|877", "task": "gsm8k", "model": "gptq4", "id": "877", "label": "conceptual", "source": "judge", "reason": "Treated revenue as cost, ignored profit subtraction"}
+{"key": "gsm8k|gptq4|879", "task": "gsm8k", "model": "gptq4", "id": "879", "label": "conceptual", "source": "judge", "reason": "Used wrong base for pedicure calculation"}
+{"key": "gsm8k|gptq4|892", "task": "gsm8k", "model": "gptq4", "id": "892", "label": "execution", "source": "judge", "reason": "Divided carrot total cost incorrectly"}
+{"key": "gsm8k|gptq4|901", "task": "gsm8k", "model": "gptq4", "id": "901", "label": "conceptual", "source": "judge", "reason": "Misinterpreted pot capacity as sum of adult and child bowls"}
+{"key": "gsm8k|gptq4|906", "task": "gsm8k", "model": "gptq4", "id": "906", "label": "reasoning", "source": "judge", "reason": "Gave separate counts, not total 10 as asked"}
+{"key": "gsm8k|gptq4|912", "task": "gsm8k", "model": "gptq4", "id": "912", "label": "conceptual", "source": "judge", "reason": "Divided minutes by 60 instead of 30 for half\u2011hours"}
+{"key": "gsm8k|gptq4|918", "task": "gsm8k", "model": "gptq4", "id": "918", "label": "execution", "source": "judge", "reason": "Added 16+22 incorrectly as 48"}
+{"key": "gsm8k|gptq4|922", "task": "gsm8k", "model": "gptq4", "id": "922", "label": "conceptual", "source": "judge", "reason": "Misinterpreted years as months, ignored 12 months per year"}
+{"key": "gsm8k|gptq4|924", "task": "gsm8k", "model": "gptq4", "id": "924", "label": "conceptual", "source": "judge", "reason": "Misread trip time as 8 hours per trip"}
+{"key": "gsm8k|gptq4|928", "task": "gsm8k", "model": "gptq4", "id": "928", "label": "execution", "source": "judge", "reason": "Incorrect addition leading to wrong total"}
+{"key": "gsm8k|gptq4|933", "task": "gsm8k", "model": "gptq4", "id": "933", "label": "conceptual", "source": "judge", "reason": "Misinterpreted the 10 existing boxes as per person"}
+{"key": "gsm8k|gptq4|934", "task": "gsm8k", "model": "gptq4", "id": "934", "label": "method", "source": "judge", "reason": "Divided by total seeds, not number of people"}
+{"key": "gsm8k|gptq4|940", "task": "gsm8k", "model": "gptq4", "id": "940", "label": "conceptual", "source": "judge", "reason": "Ignored 5 schools, used only 7 rows"}
+{"key": "gsm8k|gptq4|945", "task": "gsm8k", "model": "gptq4", "id": "945", "label": "conceptual", "source": "judge", "reason": "Misread remaining distance and speed"}
+{"key": "gsm8k|gptq4|95", "task": "gsm8k", "model": "gptq4", "id": "95", "label": "conceptual", "source": "judge", "reason": "Incorrect boys fraction, miscomputed girls"}
+{"key": "gsm8k|gptq4|951", "task": "gsm8k", "model": "gptq4", "id": "951", "label": "conceptual", "source": "judge", "reason": "Misinterprets thickness per page, wrong set\u2011up"}
+{"key": "gsm8k|gptq4|955", "task": "gsm8k", "model": "gptq4", "id": "955", "label": "execution", "source": "judge", "reason": "Subtracted 50 beds for too many days, wrong final count"}
+{"key": "gsm8k|gptq4|962", "task": "gsm8k", "model": "gptq4", "id": "962", "label": "conceptual", "source": "judge", "reason": "Read 50% more as 50% of"}
+{"key": "gsm8k|gptq4|966", "task": "gsm8k", "model": "gptq4", "id": "966", "label": "method", "source": "judge", "reason": "Added eaten brownies instead of subtracting"}
+{"key": "gsm8k|gptq4|975", "task": "gsm8k", "model": "gptq4", "id": "975", "label": "execution", "source": "judge", "reason": "Incorrect subtraction: 60\u201120\u201130 computed as 0 instead of 10"}
+{"key": "gsm8k|gptq4|976", "task": "gsm8k", "model": "gptq4", "id": "976", "label": "conceptual", "source": "judge", "reason": "Introduced variable and assumed value not given"}
+{"key": "gsm8k|gptq4|977", "task": "gsm8k", "model": "gptq4", "id": "977", "label": "conceptual", "source": "judge", "reason": "Misinterpreted bottle capacity"}
+{"key": "gsm8k|gptq4|992", "task": "gsm8k", "model": "gptq4", "id": "992", "label": "conceptual", "source": "judge", "reason": "Misread church check frequency"}
+{"key": "gsm8k|gptq4|995", "task": "gsm8k", "model": "gptq4", "id": "995", "label": "method", "source": "judge", "reason": "Used wrong equation, added savings instead of subtracting"}

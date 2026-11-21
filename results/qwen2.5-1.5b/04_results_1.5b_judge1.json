@@ -1,0 +1,127 @@
+{
+ "judge": "gemini:gemini-3.5-flash-lite",
+ "kappa": {
+  "gsm8k": {
+   "kappa": 0.3661971830985915,
+   "raw_agreement": 0.6,
+   "n": 30
+  },
+  "triviaqa": {
+   "kappa": 0.4954128440366973,
+   "raw_agreement": 0.725,
+   "n": 40
+  }
+ },
+ "rq2": {
+  "gsm8k": {
+   "counts": {
+    "conceptual": {
+     "gptq4": 92,
+     "rtn4": 88
+    },
+    "degeneration": {
+     "gptq4": 10,
+     "rtn4": 4
+    },
+    "execution": {
+     "gptq4": 48,
+     "rtn4": 44
+    },
+    "method": {
+     "gptq4": 36,
+     "rtn4": 42
+    },
+    "reasoning": {
+     "gptq4": 12,
+     "rtn4": 17
+    },
+    "scoring_issue": {
+     "gptq4": 1,
+     "rtn4": 3
+    }
+   },
+   "percent": {
+    "conceptual": {
+     "gptq4": 46.2,
+     "rtn4": 44.4
+    },
+    "degeneration": {
+     "gptq4": 5.0,
+     "rtn4": 2.0
+    },
+    "execution": {
+     "gptq4": 24.1,
+     "rtn4": 22.2
+    },
+    "method": {
+     "gptq4": 18.1,
+     "rtn4": 21.2
+    },
+    "reasoning": {
+     "gptq4": 6.0,
+     "rtn4": 8.6
+    },
+    "scoring_issue": {
+     "gptq4": 0.5,
+     "rtn4": 1.5
+    }
+   },
+   "missing": 0,
+   "chi2": 4.135178131197044,
+   "p": 0.38802048933947597,
+   "dof": 4,
+   "min_expected": 6.9465648854961835
+  },
+  "triviaqa": {
+   "counts": {
+    "degeneration": {
+     "gptq4": 5,
+     "rtn4": 11
+    },
+    "near_miss": {
+     "gptq4": 361,
+     "rtn4": 428
+    },
+    "no_answer": {
+     "gptq4": 20,
+     "rtn4": 15
+    },
+    "scoring_issue": {
+     "gptq4": 45,
+     "rtn4": 66
+    },
+    "unrelated": {
+     "gptq4": 321,
+     "rtn4": 365
+    }
+   },
+   "percent": {
+    "degeneration": {
+     "gptq4": 0.7,
+     "rtn4": 1.2
+    },
+    "near_miss": {
+     "gptq4": 48.0,
+     "rtn4": 48.4
+    },
+    "no_answer": {
+     "gptq4": 2.7,
+     "rtn4": 1.7
+    },
+    "scoring_issue": {
+     "gptq4": 6.0,
+     "rtn4": 7.5
+    },
+    "unrelated": {
+     "gptq4": 42.7,
+     "rtn4": 41.2
+    }
+   },
+   "missing": 0,
+   "chi2": 3.273372865015415,
+   "p": 0.351365873399238,
+   "dof": 3,
+   "min_expected": 7.412844036697248
+  }
+ }
+}

@@ -1,0 +1,384 @@
+{"key": "gsm8k|gptq4|847", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misinterpreted interest rate as percent", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1146", "task": "gsm8k", "model": "gptq4", "judge_label": "method", "reason": "Used wrong loss formula", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1131", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misread logs vs feet, swapped quantities", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|857", "task": "gsm8k", "model": "gptq4", "judge_label": "reasoning", "reason": "Final total contradicts earlier calculation", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|206", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Arithmetic multiplication errors on both periods", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|798", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Ignored Billy's $1 raise, misread final wage", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1087", "task": "gsm8k", "model": "gptq4", "judge_label": "method", "reason": "Added rates instead of subtracting truck pickups", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|323", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misinterpreted weakening effects of cream and ice cubes", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1063", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misread % requiring response, used 20% instead of 80%", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|851", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Correct setup, arithmetic division error (2640/24 miscalculated)", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|707", "task": "gsm8k", "model": "gptq4", "judge_label": "reasoning", "reason": "Incorrectly added percentages instead of multiplying", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1120", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Omitted twice\u2011a\u2011month factor, used only one round trip", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|918", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Added 16+22 incorrectly as 48", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1166", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Used 7\u2011year amount instead of 10\u2011year for year 8", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|567", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Halved amount again for fifth tooth, misreading rule", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|322", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Assumed each box holds 26 pencils", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|642", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Multiplication error for shirt cost", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|230", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Incorrect sum of components", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|585", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misinterpreted John's hours relative to Jill", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|18", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Converted omelets to dozens without accounting eggs per omelet", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|945", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misread remaining distance and speed", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1146", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Incorrect equation linking revenue to cost", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|739", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Wrong relation for half\u2011gallon price", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|785", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Ignored 3/5 spending condition", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1047", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Reversed relationship between first and second sets", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|763", "task": "gsm8k", "model": "rtn4", "judge_label": "method", "reason": "Incorrect algebraic simplification of terms", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1129", "task": "gsm8k", "model": "rtn4", "judge_label": "reasoning", "reason": "Unjustified assumption leading to wrong difference", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|839", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misinterpreted question, gave total cows instead of needed cows", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|425", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misidentified feeder types and bird counts", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|973", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Ignored known USA state count", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|164", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misread lost hours (used 1 instead of 3)", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|226", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Omitted fire cards from total count", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1209", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Incorrect addition of 3+6+20", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|598", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Added coin values incorrectly, got 445 instead of 345", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|578", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Omitted final multiplication step", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|148", "task": "gsm8k", "model": "gptq4", "judge_label": "method", "reason": "Used wrong equation, subtracted change instead of adding", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|326", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Arithmetic simplification error", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|189", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misinterpreted food cost relation", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|593", "task": "gsm8k", "model": "rtn4", "judge_label": "reasoning", "reason": "Incorrect comparison of heights", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1306", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misread Petri dish condition", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1218", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Counted 3 grades instead of 4, misreading total students", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|66", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Correct counts but added to 50 instead of 48", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|394", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Multiplied rows and columns twice, inflating total books", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|570", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Assumed all $70 spent on wooden figures, ignored daily limit", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|901", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misinterpreted pot capacity as sum of adult and child bowls", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|765", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Treated 45% more as 45% of bananas only", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1170", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Assumed equal share among four colors, ignoring half yellow", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|157", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Used 100\u202fyd per round trip and ignored 34 extra runs", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|315", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misinterpreted 1/4 of illness number as 1/4 of remaining", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|801", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Counted only 3 teachers total, ignored 40 classes", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|475", "task": "gsm8k", "model": "gptq4", "judge_label": "method", "reason": "Used wrong formula dividing minutes by days per week", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|478", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Added only one group's employees instead of all three", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1206", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Used house value instead of loan amount for leftover", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|361", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Miscomputed third-leg distance (150 vs 125)", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|576", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Arithmetic error in installation cost (216\u00d734)", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|52", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misread target weight, introduced incorrect 12\u2011pound goal", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|415", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Assumed sister takes average trees apples", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|976", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Used wrong number for Sunday apple pies", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1064", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Multiplied Wednesday by Tuesday instead of Monday", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|378", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Counted each pair as one sock", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|697", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Added extra generation, misread hierarchy", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|7", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Assumed continuation of remaining 120\u202fGB after restart", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|157", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Wrong round\u2011trip distance and omitted Kelly's first run", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|602", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Incorrect division 1200\u00f73 gave 40 instead of 400", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|371", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Ignored the 6 returned pairs", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|401", "task": "gsm8k", "model": "gptq4", "judge_label": "method", "reason": "Multiplied days by monthly earnings instead of $50", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1300", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Counted 6 workdays per week, not 5", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|58", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misinterpreted 25% fee as delivery fee, omitted $3", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1096", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Ignored April days, used only March", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|630", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Subtracted wrong group, misinterpreted men count", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|951", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Missed double\u2011sided page factor", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|331", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Treated yearly salary as hourly wage", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1244", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Used wrong total questions (60) instead of 110", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1001", "task": "gsm8k", "model": "rtn4", "judge_label": "method", "reason": "Incorrect start-time calculation; wrong subtraction plan", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1013", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misinterpreted earnings per week vs per hour", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|870", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Assumed equal split, ignored 60% share", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|191", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Double\u2011counted ducks in daily total", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|554", "task": "gsm8k", "model": "gptq4", "judge_label": "method", "reason": "Computed per\u2011mile difference, not 3\u2011mile total", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1231", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Incorrect sum and count of scores", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|39", "task": "gsm8k", "model": "gptq4", "judge_label": "degeneration", "reason": "No numeric final answer, left expression 6t", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|121", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Added numbers incorrectly, got 23 instead of 27", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1022", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misinterpreted large price as 4/3 of small price", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|542", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Subtracted 13 from 20 incorrectly, gave 6", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1056", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Assumed 4 sheets per bed, misread loads requirement", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|909", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misinterpreted equation; used current age instead of age four years ago", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1056", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Incorrectly multiplied loads; misread capacity relationship", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|304", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Omitted weekly bonus from calculation", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|891", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Reversed faster\u2011than relationship between objects", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|414", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Ignored discount, used regular price only", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|289", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Returned time difference instead of slow lane time", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|341", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Arithmetic error adding container weight", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1147", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Used max days instead of total sum", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|992", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misinterpreted quarterly check frequency", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|304", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Used days as weeks, misread schedule", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|261", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Incorrect penny\u2011to\u2011dollar conversion", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|346", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Changed weekly problem to yearly scope", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1009", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misread female proportion over 16 as half", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|100", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Interpreted '10 times more' as multiplication", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1055", "task": "gsm8k", "model": "gptq4", "judge_label": "method", "reason": "Added normal cost twice, wrong aggregation plan", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|39", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Included skipping distance not asked for", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|346", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misread son's cookies as 4 total instead of 20", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|320", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Incorrectly handled people leaving; misapplied counts", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|238", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Arithmetic error adding ages", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1132", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Reversed brother/Valerie earnings relationship", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|116", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misread total as only sugar, ignored water quantity", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|323", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Treats each degree as weakening instead of per ice cube", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|457", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Omitted the 25 added fairies from the total", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|438", "task": "gsm8k", "model": "rtn4", "judge_label": "method", "reason": "Divided by wrong number of servings", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|743", "task": "gsm8k", "model": "gptq4", "judge_label": "method", "reason": "Used addition instead of multiplication for tripling", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|20", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Subtracted whole liter instead of 2/3 liter water", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|976", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Introduced variable and assumed value not given", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|578", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Multiplied by 20 instead of (20\u201112)=8", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|282", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Missed multiplying guests by 2", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|770", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Ignored number of scent types", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1005", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Did not multiply babies by number of females", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1166", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Did not substitute initial fruit count (50)", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1272", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Ignored 3 nights, used one-night cost", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|966", "task": "gsm8k", "model": "gptq4", "judge_label": "method", "reason": "Added eaten brownies instead of subtracting", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|962", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Read 50% more as 50% of", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|361", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misread third-leg distance, used wrong value", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|531", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Arithmetic error: 48-8+40 computed as 70", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|2", "task": "gsm8k", "model": "rtn4", "judge_label": "method", "reason": "Profit formula wrong, ignored repair cost", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|887", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misinterpreted 2/3 of nesting birds, introduced unknown x", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|216", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Multiplication error: 165*12 calculated as 2020", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|22", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misread second group total DVDs as 2 instead of 4", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|928", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Incorrect addition leading to wrong total", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1064", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Used three times Tuesday instead of Monday for Wednesday", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1005", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Omitted original male porcupines in final total", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|483", "task": "gsm8k", "model": "gptq4", "judge_label": "method", "reason": "Subtracted Gabriel's songs instead of his add capacity", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|622", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Incorrect subtraction 20-6 gave 15", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|276", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Ignored 5/8 fraction for C, treated all remaining as C", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|757", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Added numbers incorrectly, got 73 instead of 75", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|467", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Omitted pillow cases from total sum", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|429", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Provided individual counts instead of total", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|737", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Incorrect multiplication for small cubes water", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|870", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Ignored Madeline's 60% share", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|415", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misinterpreted average trees amount as T\u2011S", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|504", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Forgot there are two strawberry packs", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|188", "task": "gsm8k", "model": "rtn4", "judge_label": "method", "reason": "Omitted purchase cost in profit calculation", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|707", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Incorrectly subtracted percentages instead of multiplying", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|740", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Arithmetic subtraction error", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|992", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misread church check frequency", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1195", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Used wrong base for evening multiplier", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|666", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misinterpreted relationships and names", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|761", "task": "gsm8k", "model": "rtn4", "judge_label": "method", "reason": "Used wrong factor for two\u2011thirds relationship", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|466", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Ignored Becky\u2019s $1 discount", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1080", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Incorrect seconds\u2011per\u2011hour conversion", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|798", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misread Sally\u2019s salary as after raise", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1193", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Assumed each task repeats weekly instead of using given total counts", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|793", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Counted only 1 overtime hour instead of 3", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|265", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Added fees incorrectly, arithmetic mistake", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|383", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Used 4 hours instead of 9 hours for profit per hour", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|438", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Omitted beef stock cost", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|199", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Counted all sentences for each publisher", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1198", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Interpreted 1/4 more as 1/4 of", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|924", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misread trip time as 8 hours per trip", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1132", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misread brother's salary relationship", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|156", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Added totals incorrectly", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|341", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Summation error", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|977", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misinterpreted bottle capacity", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|532", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Used current age instead of age in 8 years", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|940", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Ignored the 5 schools, used only 7 rows", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|644", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Took husband's age as mom's, not son's", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1239", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Incorrect formula linking minutes and classrooms", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|467", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misinterpreted comforter count as 2s", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|417", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Counted only 6 days of 300\u202fkm instead of 7", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|995", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Added parents' money instead of subtracting from cost", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|906", "task": "gsm8k", "model": "gptq4", "judge_label": "reasoning", "reason": "Gave separate counts, not total 10 as asked", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|313", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Used current Cera age instead of age six years ago", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|588", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Ignored second increase, averaged only two measurements", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|199", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Assumed each publisher gets all 1000 sentences", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|892", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Divided carrot total cost incorrectly", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|991", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misinterpreted 3\u00d7father age as 3\u00d7Bill's first age", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1003", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Omitted multiplying per\u2011student cost by number of sessions", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1271", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Added red, orange, yellow counts incorrectly", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|576", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Arithmetic error in installation cost multiplication", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|620", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Ignored 1000\u2011play limit, summed played counts directly", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1025", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Forgot the 10 eggs not found by friends", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1243", "task": "gsm8k", "model": "gptq4", "judge_label": "method", "reason": "Applied $3 discount per stick instead of per bag", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|204", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Incorrect addition of component totals", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|602", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Subtracted prior 3\u202fh, misreading \u201cadditional hours\u201d", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|975", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Incorrect subtraction: 60\u201120\u201130 computed as 0 instead of 10", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|830", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Multiplication error: 282\u202f\u00d7\u202f4 gave 1088 instead of 1128", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1241", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misinterpreted $1 for 3 eggs as $12 per dozen", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1139", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Divided by 4 bags instead of 36 bagels", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1071", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Used 45 as non\u2011attending guests instead of 4", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|150", "task": "gsm8k", "model": "rtn4", "judge_label": "reasoning", "reason": "Took longer time as waiting time instead of difference", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|821", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Halved initial 50 instead of 70 after first break", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|900", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Ignored yesterday totals, compared only today's pages", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1264", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Omitted residual\u2011heat kernels", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|652", "task": "gsm8k", "model": "rtn4", "judge_label": "method", "reason": "Used cumulative doubling instead of constant twice\u2011first\u2011hour cost", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|504", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Counted two strawberry packs as one", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|969", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Omitted one half\u2011price phone, misread quantity", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|385", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Counted all members as female, misread gender count", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|264", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Correct amounts, added to 300 instead of 400", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|172", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misinterpreted Sally Two relation, used wrong reference", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1239", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Mixed minutes with hours, ignored unit consistency", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|901", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misinterpreted pot capacity, added adult and child bowls", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|586", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Used wrong water\u2011per\u2011calorie ratio", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|700", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Ignored 40% visibility factor for city fireworks", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1026", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Used 12\u202flb as iron rate, halved steel capacity", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|554", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Compared per\u2011mile warm time to total cold time", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|912", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Divided minutes by 60 instead of 30 for half\u2011hours", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|114", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Multiplied Jamal's capacity by 50, reversed relationship", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|468", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misread 'gets rid of' as gaining shoes", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|940", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Ignored 5 schools, used only 7 rows", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|37", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Assumed all 13 sets remain, ignored sales", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|290", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Reversed relationship of total medals vs their share", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|788", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Ignored John's $50 when computing missing amount", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1294", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misapplied BOGO 50% off to both shirts", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|173", "task": "gsm8k", "model": "rtn4", "judge_label": "method", "reason": "Applied 50% increase twice, over\u2011inflating total", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1092", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misinterpreted Allosaurus eating the last 270\u202fkg as leftover", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|383", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Used cost per pitcher instead of total cost", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1214", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Added wife's changes instead of subtracting", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1142", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Arithmetic error in subtraction", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|877", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Treated revenue as cost, ignored profit subtraction", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|471", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misinterpreted 1/3 left as 1/3 used", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|630", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Subtracted women from total riders instead of upright riders", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|585", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Used wrong multiplier for John's Saturday hours", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|828", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Added costs to total then subtracted incorrectly", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1073", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Assumes equal split of bananas among monkeys", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|692", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Uses wrong price for banana and orange", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|967", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Incorrect addition of ages", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|151", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Counts tires per vehicle incorrectly", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|619", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misread poles per intersection, used 4 lights only", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|394", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Double\u2011counted rows, total books incorrect", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|95", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Incorrect boys fraction, miscomputed girls", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|7", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Ignored 40% progress, assumed full download twice", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1204", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Arithmetic subtraction error, 700-280-252 miscomputed", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|11", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Addition error, 204+160+330 summed incorrectly", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|922", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misinterpreted years as months, ignored 12 months per year", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|275", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Counted total scene lines instead of his lines", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|203", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Correct setup, arithmetic sum miscalculated", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|931", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misdefined variables, confused ages of Peter and Jean", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|761", "task": "gsm8k", "model": "gptq4", "judge_label": "method", "reason": "Used wrong relationship (\u00d72 instead of \u00d73/2)", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1183", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misinterpreted apple counting process", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|681", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Omitted Summer's cookies from total", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|436", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Ignored 8 pieces, used only 2 pieces", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1299", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Counted only one movie ticket instead of two", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1258", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Reversed cost relationship of main and additional phones", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|620", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Added played times instead of remaining plays", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1170", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Assumed equal share among all colors, ignored half yellow", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|808", "task": "gsm8k", "model": "rtn4", "judge_label": "reasoning", "reason": "Incorrectly subtracted consumption from leftover, flawed logic", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|324", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Assumed each person brought exactly 2 old records", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|175", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misinterpreted sugar cost as total $2 instead of per gallon", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|408", "task": "gsm8k", "model": "rtn4", "judge_label": "method", "reason": "Used wrong formula for early time, subtracting reading time twice", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|571", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Incorrect addition of 200+60+48 gave 300", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1258", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Reversed cost relationship between main and additional phones", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|648", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Omitted teacher's cupcakes", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1017", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misinterpreted album counts", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|995", "task": "gsm8k", "model": "gptq4", "judge_label": "method", "reason": "Used wrong equation, added savings instead of subtracting", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1130", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Ignored crayon weight", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|233", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misapplied second one-third to remaining penguins", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|257", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Treated weight per foot instead of per 10\u2011foot section", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1039", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Forgot to multiply by two fabric pieces", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|164", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Sign error in final subtraction", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1152", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misread 3\u00d7 chance as 300% probability", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|729", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Assumed all 5000 voted by 8:00", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|290", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misinterpreted \u201c10 times less\u201d relationship", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|922", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Treated shells per month as per year", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|410", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misinterpreted taffy sale, treated 2\u202flb as $3 total", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1294", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Applied 50% off to both shirts instead of one", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|531", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Subtracted 40 from 8 incorrectly for net change", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1300", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Calculated work days by division instead of multiplication", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|138", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Ignores rate and time, assumes all questions attempted", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1251", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misstates fifth side time and omits sixth side", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|563", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Counts only two candles instead of ages", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1314", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Incorrect age calculation for youngest son", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|935", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Incorrect multiplication of 60*24*30", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|784", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Forgot round\u2011trip distance", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|58", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misidentified 25% fee as delivery fee", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|19", "task": "gsm8k", "model": "gptq4", "judge_label": "method", "reason": "Used wrong plan to compute required speed", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|500", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Incorrect algebraic simplification of terms", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1207", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Added weights incorrectly", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|385", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misinterpreted total female members", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|50", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Wrong multiplication and division calculations", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|567", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Incorrect arithmetic for half\u2011price calculation", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|657", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misread fuel cost relationship", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|282", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Omitted coaches from total people", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|49", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Ignored 3/4 occupancy, used only Richard's unit", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|681", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Used wrong relation for Summer's cookies", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|597", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misidentified largest angle as sum of others", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1013", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Divided by hourly earnings instead of weekly earnings", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1109", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Divided by 3 women instead of total 6", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|833", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misidentified h as Pompei height, ignored Saskay factor", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|128", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Incorrect addition of component totals", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|569", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misread Mitchell's revenue as $21 instead of 21\u00d7$4", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|479", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Forgot to multiply hotel cost by 3 days", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1025", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Ignored the \"except 10\" condition", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|653", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misinterpreted withheld amount and divided by wage", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|802", "task": "gsm8k", "model": "gptq4", "judge_label": "method", "reason": "Used wrong equation for 30% of total", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|569", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Swapped Liam and Mitchell's sales information", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1022", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misread price relationship; used 4/3 instead of 3 times", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|770", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Ignored multiple scent varieties; used single counts", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1271", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Incorrect addition leading to wrong subtraction", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|135", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Forgot Brian lost 5 games before comparison", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1066", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misinterpreted total left formula, subtracting orders as well", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|227", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Omitted the $3 upgrade cost", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1138", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Arithmetic addition error, summed to 690 instead of 700", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|570", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Counted wooden days incorrectly (4 instead of 3)", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1183", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Miscounted apples, added thrown apple to totals", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|53", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Omitted car tire revenue on Thursday", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|351", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misinterpreted roses needing extra 60 pots", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|652", "task": "gsm8k", "model": "gptq4", "judge_label": "method", "reason": "Used exponential cost instead of constant double of first hour", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|148", "task": "gsm8k", "model": "rtn4", "judge_label": "method", "reason": "Used wrong formula for change (subtracted instead of added).", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|763", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misread which house is half of which.", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|14", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Incorrectly applied percentages to compute hip\u2011hop share.", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1086", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Mis\u2011set and solved variable for Trekking bikes.", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1186", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Arithmetic addition error", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|648", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Omitted teacher from count", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|339", "task": "gsm8k", "model": "gptq4", "judge_label": "method", "reason": "Used incorrect legs formula", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|4", "task": "gsm8k", "model": "rtn4", "judge_label": "method", "reason": "Calculated per\u2011chicken feed instead of total", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1180", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Refunded non\u2011spoiled milk cost instead of spoiled milk", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|694", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misinterpreted needed chairs, subtracted high chairs from total", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|760", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Used 60% for horse #12 instead of horse #7", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|410", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Calculated taffy cost incorrectly, treated both pounds at half price", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|951", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misinterprets thickness per page, wrong set\u2011up", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|315", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Treats previous commitments as subtraction from ill count", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|640", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Incorrect addition of costs", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|791", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Omits second stop subtraction", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|584", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Ignored 10% discount on box price", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|209", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misread half\u2011dozen plates as two plates", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|19", "task": "gsm8k", "model": "rtn4", "judge_label": "method", "reason": "Used wrong formula for remaining time", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|725", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Averaged per\u2011sausage times instead of total times", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|657", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Ignored plane purchase", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|11", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Added numbers incorrectly", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|793", "task": "gsm8k", "model": "gptq4", "judge_label": "method", "reason": "Applied regular rate to all hours", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|418", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Reversed locker size relationship", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1212", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Ignored John\u2019s second class", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|244", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Omitted Colby\u2019s subtraction", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|45", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misread \"2/5 times more\" as 2/5 of Monday", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|724", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Counted only 3 people instead of 5", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1014", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Used wrong price for pears ($0.75 instead of $0.5).", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|0", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Assumed all remaining eggs used for muffins, misreading 4 eggs.", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|532", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Used cousin's future age instead of current age for difference.", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1129", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Ignored +12 in equation, solving S+S=30 incorrectly.", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|135", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Ignored the 5-game loss before comparison", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|189", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Added costs incorrectly, getting $92 instead of $102", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|933", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misinterpreted the 10 existing boxes as per person", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|584", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Omitted discount and miscounted total pairs of contacts", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|955", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Subtracted 50 beds for too many days, wrong final count", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1207", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Added tuna weights incorrectly, got 138 kg", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1130", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Ignored crayon weight, considered only boxes", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1009", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misinterpreted gender fractions, used wrong splits", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|52", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misread total removal weight as comic weight", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|367", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Incorrect algebraic solving of equation", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|879", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Used wrong base for pedicure calculation", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1080", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Incorrect seconds\u2011per\u2011hour conversion", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|275", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Added wrong term (60 instead of 48)", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|934", "task": "gsm8k", "model": "gptq4", "judge_label": "method", "reason": "Divided by total seeds, not number of people", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|25", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Subtraction error (50\u201133 gave 8)", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|637", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misinterpreted Reggie's distance formula", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|683", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Misread turtle half-time as 40\u202fmin instead of 30\u202fmin", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|801", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Counted only 3 teachers total, ignored per\u2011class teachers", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|466", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Ignored Becky's $1 discount", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|596", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Applied crown cost to both implants instead of one", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|106", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Incorrect wall volume interpretation", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|272", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Added costs incorrectly", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1193", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Assumed weekly rates instead of given counts", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|621", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Treated hourly rate as per session", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|425", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misidentified own-made feeders count and birds per feeder", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1119", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Interpreted \"well over\" as +1 hour", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1244", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Used 60% instead of required 70%", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|146", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Applied 1/4 to second box, not first", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1027", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misinterpreted price per sandwich as total cost", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|397", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Ignored initial $50 balance", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|63", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Incorrect addition of 840 and 756", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|731", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Divided smores by sleeves per box, missing 8 per sleeve", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|2", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misinterpreted 150% increase and subtracted wrong cost", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|550", "task": "gsm8k", "model": "gptq4", "judge_label": "execution", "reason": "Added costs incorrectly, got $20 instead of $30", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|810", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Skipped first month doubling, resulting in 160 not 320", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|137", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Forgot to add the $5 tip", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|144", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misread bleach cost per bottle, wrong per-client expense", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|29", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Added 33+66 incorrectly, arithmetic error", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|63", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Treated $140 as total for half-year, not monthly", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|446", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Assumed each tray holds 5 eggs instead of 25", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|540", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Misread initial share as $18 instead of $6", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1198", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Interpreted \"1/4 more\" as \"1/4 of\"", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|1292", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Reversed Jackie\u2019s relation to Anne", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|765", "task": "gsm8k", "model": "rtn4", "judge_label": "execution", "reason": "Omitted adding bananas to total fruit count", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|1115", "task": "gsm8k", "model": "rtn4", "judge_label": "conceptual", "reason": "Ignored the $2 left, miscomputed money spent on books", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|rtn4|990", "task": "gsm8k", "model": "rtn4", "judge_label": "reasoning", "reason": "Incorrect sign when expressing difference, final answer contradicts work", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|726", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Set up wrong equation, used 100 instead of 10 inches", "judge": "groq:openai/gpt-oss-120b"}
+{"key": "gsm8k|gptq4|479", "task": "gsm8k", "model": "gptq4", "judge_label": "conceptual", "reason": "Omitted 20% hotel surcharge, used normal price only", "judge": "groq:openai/gpt-oss-120b"}

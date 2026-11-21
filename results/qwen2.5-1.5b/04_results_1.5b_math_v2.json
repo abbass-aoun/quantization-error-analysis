@@ -1,0 +1,66 @@
+{
+ "judge": "groq:openai/gpt-oss-120b",
+ "tasks": [
+  "gsm8k"
+ ],
+ "kappa": {
+  "gsm8k": {
+   "kappa": 0.4545454545454545,
+   "raw_agreement": 0.7333333333333333,
+   "n": 30
+  }
+ },
+ "rq2": {
+  "gsm8k": {
+   "counts": {
+    "conceptual": {
+     "gptq4": 135,
+     "rtn4": 143
+    },
+    "degeneration": {
+     "gptq4": 10,
+     "rtn4": 4
+    },
+    "execution": {
+     "gptq4": 32,
+     "rtn4": 34
+    },
+    "method": {
+     "gptq4": 19,
+     "rtn4": 12
+    },
+    "reasoning": {
+     "gptq4": 3,
+     "rtn4": 5
+    }
+   },
+   "percent": {
+    "conceptual": {
+     "gptq4": 67.8,
+     "rtn4": 72.2
+    },
+    "degeneration": {
+     "gptq4": 5.0,
+     "rtn4": 2.0
+    },
+    "execution": {
+     "gptq4": 16.1,
+     "rtn4": 17.2
+    },
+    "method": {
+     "gptq4": 9.5,
+     "rtn4": 6.1
+    },
+    "reasoning": {
+     "gptq4": 1.5,
+     "rtn4": 2.5
+    }
+   },
+   "missing": 0,
+   "chi2": 4.94040807495234,
+   "p": 0.29346683487513764,
+   "dof": 4,
+   "min_expected": 3.9899244332493704
+  }
+ }
+}

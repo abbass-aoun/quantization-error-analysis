@@ -1,0 +1,98 @@
+{
+ "fp16_wiki": 9.649341660876333,
+ "fp16_c4": 15.646550117299638,
+ "rtn4_wiki": 10.737937351191883,
+ "rtn4_c4": 17.228790450500526,
+ "gptq4_wiki": 11.1815169695972,
+ "gptq4_c4": 16.642643446237408,
+ "layer_check": [
+  {
+   "layer": "1.self_attn.q_proj",
+   "gptq/rtn_c4": 0.34836036649045987,
+   "gptq_act/rtn_c4": 0.2767848759567762,
+   "gptq/rtn_wiki": 0.45663143029050146,
+   "gptq_act/rtn_wiki": 0.37702959798402025
+  },
+  {
+   "layer": "1.self_attn.o_proj",
+   "gptq/rtn_c4": 0.08985301456752719,
+   "gptq_act/rtn_c4": 0.06781370401935391,
+   "gptq/rtn_wiki": 0.15359709768491783,
+   "gptq_act/rtn_wiki": 0.11865334412164329
+  },
+  {
+   "layer": "1.mlp.down_proj",
+   "gptq/rtn_c4": 0.019728581122831303,
+   "gptq_act/rtn_c4": 0.004312695288398083,
+   "gptq/rtn_wiki": 0.15393566375155876,
+   "gptq_act/rtn_wiki": 0.009281498451087281
+  },
+  {
+   "layer": "5.self_attn.q_proj",
+   "gptq/rtn_c4": 0.3642385686032674,
+   "gptq_act/rtn_c4": 0.2838514677728779,
+   "gptq/rtn_wiki": 0.533960254203225,
+   "gptq_act/rtn_wiki": 0.45874115522644726
+  },
+  {
+   "layer": "5.self_attn.o_proj",
+   "gptq/rtn_c4": 0.3303188123437075,
+   "gptq_act/rtn_c4": 0.29536769618688,
+   "gptq/rtn_wiki": 0.5561427510534575,
+   "gptq_act/rtn_wiki": 0.5067471425356077
+  },
+  {
+   "layer": "5.mlp.down_proj",
+   "gptq/rtn_c4": 0.5787517798896653,
+   "gptq_act/rtn_c4": 0.40988884518450536,
+   "gptq/rtn_wiki": 1.0907868751487504,
+   "gptq_act/rtn_wiki": 1.2158083578597974
+  },
+  {
+   "layer": "14.self_attn.q_proj",
+   "gptq/rtn_c4": 0.4107062259098417,
+   "gptq_act/rtn_c4": 0.3036980190005388,
+   "gptq/rtn_wiki": 0.552632131226368,
+   "gptq_act/rtn_wiki": 0.446134528148154
+  },
+  {
+   "layer": "14.self_attn.o_proj",
+   "gptq/rtn_c4": 0.30934419516013684,
+   "gptq_act/rtn_c4": 0.23936339080348687,
+   "gptq/rtn_wiki": 0.3473581036920772,
+   "gptq_act/rtn_wiki": 0.3063216452661025
+  },
+  {
+   "layer": "14.mlp.down_proj",
+   "gptq/rtn_c4": 0.5803950474012549,
+   "gptq_act/rtn_c4": 0.5292932320271685,
+   "gptq/rtn_wiki": 0.8408831857952993,
+   "gptq_act/rtn_wiki": 0.8195834794292726
+  },
+  {
+   "layer": "27.self_attn.q_proj",
+   "gptq/rtn_c4": 0.5227452365503564,
+   "gptq_act/rtn_c4": 0.39615612368462627,
+   "gptq/rtn_wiki": 0.815351887521475,
+   "gptq_act/rtn_wiki": 0.7174245214010696
+  },
+  {
+   "layer": "27.self_attn.o_proj",
+   "gptq/rtn_c4": 0.1343550634339869,
+   "gptq_act/rtn_c4": 0.10775527592642663,
+   "gptq/rtn_wiki": 0.2467906981627675,
+   "gptq_act/rtn_wiki": 0.21620753157431166
+  },
+  {
+   "layer": "27.mlp.down_proj",
+   "gptq/rtn_c4": 0.09397985988238049,
+   "gptq_act/rtn_c4": 0.05848234523340779,
+   "gptq/rtn_wiki": 0.2844151955409803,
+   "gptq_act/rtn_wiki": 0.25137127027973816
+  }
+ ],
+ "gptq4_act_wiki": 10.18604214468342,
+ "gptq4_act_c4": 16.28435170123279,
+ "gptq4_actts_wiki": 10.26063888167678,
+ "gptq4_actts_c4": 16.283186373527283
+}

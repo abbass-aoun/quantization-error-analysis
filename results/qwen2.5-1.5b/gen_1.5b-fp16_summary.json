@@ -1,0 +1,26 @@
+{
+ "model": "fp16",
+ "path": "Qwen/Qwen2.5-1.5B-Instruct",
+ "gsm8k": {
+  "n": 1319,
+  "accuracy": 0.755117513267627,
+  "boxed": 1306,
+  "hit_limit": 5
+ },
+ "triviaqa": {
+  "n": 17944,
+  "accuracy_contains": 0.3524855104770397,
+  "accuracy_em": 0.3022180115916184
+ },
+ "settings": {
+  "max_new_gsm": 1024,
+  "max_new_tqa": 32,
+  "decoding": "greedy, repetition_penalty=1.0",
+  "dtype": "float16"
+ },
+ "versions": {
+  "torch": "2.11.0+cu130",
+  "transformers": "5.20.2",
+  "datasets": "4.8.5"
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "qwen": "Qwen/Qwen2.5-1.5B-Instruct",
+ "opt": "facebook/opt-125m",
+ "bits": 4,
+ "group": 128,
+ "sym": false,
+ "calib": {
+  "gptq4": "C4 en shard 00000",
+  "gptq4_math": "GSM8K train (question + solution)"
+ },
+ "nsamples": 128,
+ "seqlen": 2048,
+ "seed": 0,
+ "damp": 0.01,
+ "blocksize": 128,
+ "torch": "2.11.0+cu130",
+ "transformers": "5.20.2"
+}
