@@ -1,0 +1,237 @@
+{
+ "accuracy": {
+  "fp16_gsm8k": {
+   "acc": 0.4927975739196361,
+   "ci95": [
+    0.46626231993934797,
+    0.5193328278999242
+   ],
+   "n": 1319
+  },
+  "rtn4_gsm8k": {
+   "acc": 0.29112964366944655,
+   "ci95": [
+    0.266868840030326,
+    0.3161485974222896
+   ],
+   "n": 1319
+  },
+  "gptq4_gsm8k": {
+   "acc": 0.3025018953752843,
+   "ci95": [
+    0.2789992418498863,
+    0.3282789992418499
+   ],
+   "n": 1319
+  },
+  "fp16_triviaqa": {
+   "acc": 0.20702811244979918,
+   "ci95": [
+    0.1994979919678715,
+    0.2151606425702811
+   ],
+   "n": 9960
+  },
+  "rtn4_triviaqa": {
+   "acc": 0.1503012048192771,
+   "ci95": [
+    0.143370983935743,
+    0.1570281124497992
+   ],
+   "n": 9960
+  },
+  "gptq4_triviaqa": {
+   "acc": 0.19447791164658634,
+   "ci95": [
+    0.18684236947791166,
+    0.2024121485943775
+   ],
+   "n": 9960
+  }
+ },
+ "flips": {
+  "rtn4_gsm8k": {
+   "harmful": 339,
+   "repair": 73,
+   "stable_right": 311,
+   "stable_wrong": 596,
+   "flip_rate": 0.312357846853677,
+   "harmful_rate_of_fp16_right": 0.5215384615384615,
+   "net_change": -0.20166793025018953,
+   "mcnemar_p": 4.672801044750025e-42
+  },
+  "gptq4_gsm8k": {
+   "harmful": 322,
+   "repair": 71,
+   "stable_right": 328,
+   "stable_wrong": 598,
+   "flip_rate": 0.2979529946929492,
+   "harmful_rate_of_fp16_right": 0.49538461538461537,
+   "net_change": -0.19029567854435178,
+   "mcnemar_p": 2.81073408076211e-39
+  },
+  "rtn4_triviaqa": {
+   "harmful": 875,
+   "repair": 310,
+   "stable_right": 1187,
+   "stable_wrong": 7588,
+   "flip_rate": 0.11897590361445783,
+   "harmful_rate_of_fp16_right": 0.4243452958292919,
+   "net_change": -0.056726907630522086,
+   "mcnemar_p": 9.281969890320797e-63
+  },
+  "gptq4_triviaqa": {
+   "harmful": 652,
+   "repair": 527,
+   "stable_right": 1410,
+   "stable_wrong": 7371,
+   "flip_rate": 0.11837349397590362,
+   "harmful_rate_of_fp16_right": 0.31619786614936957,
+   "net_change": -0.012550200803212851,
+   "mcnemar_p": 0.0003010485897085003
+  }
+ },
+ "head_to_head": {
+  "rtn4_vs_gptq4_gsm8k": {
+   "broken_by_both": 216,
+   "only_rtn4": 123,
+   "only_gptq4": 106,
+   "overlap_jaccard": 0.4853932584269663,
+   "mcnemar_p": 0.2903504959901083
+  },
+  "rtn4_vs_gptq4_triviaqa": {
+   "broken_by_both": 448,
+   "only_rtn4": 427,
+   "only_gptq4": 204,
+   "overlap_jaccard": 0.4151992585727525,
+   "mcnemar_p": 4.1853961971465662e-19
+  }
+ },
+ "auroc": {
+  "rtn4_gsm8k_mean_logprob": {
+   "auroc": 0.5928539585882442,
+   "ci95": [
+    0.5496425475163252,
+    0.6360966992426164
+   ],
+   "n": 650,
+   "flips": 339
+  },
+  "rtn4_gsm8k_min_logprob": {
+   "auroc": 0.6034108262432537,
+   "ci95": [
+    0.5594549635521673,
+    0.6459424937859185
+   ],
+   "n": 650,
+   "flips": 339
+  },
+  "gptq4_gsm8k_mean_logprob": {
+   "auroc": 0.6180692319345553,
+   "ci95": [
+    0.5740616429727,
+    0.6587293797718865
+   ],
+   "n": 650,
+   "flips": 322
+  },
+  "gptq4_gsm8k_min_logprob": {
+   "auroc": 0.6026643690349948,
+   "ci95": [
+    0.5587202636006684,
+    0.6461589017667165
+   ],
+   "n": 650,
+   "flips": 322
+  },
+  "rtn4_triviaqa_mean_logprob": {
+   "auroc": 0.5440876158382477,
+   "ci95": [
+    0.5189428962527588,
+    0.5681172728512895
+   ],
+   "n": 2062,
+   "flips": 875
+  },
+  "rtn4_triviaqa_min_logprob": {
+   "auroc": 0.5993241063906607,
+   "ci95": [
+    0.575232381105977,
+    0.6246773423982458
+   ],
+   "n": 2062,
+   "flips": 875
+  },
+  "gptq4_triviaqa_mean_logprob": {
+   "auroc": 0.5647837532088935,
+   "ci95": [
+    0.5401247193738504,
+    0.5895566388490225
+   ],
+   "n": 2062,
+   "flips": 652
+  },
+  "gptq4_triviaqa_min_logprob": {
+   "auroc": 0.616940782317365,
+   "ci95": [
+    0.5935773983160899,
+    0.6416894542655137
+   ],
+   "n": 2062,
+   "flips": 652
+  }
+ },
+ "length": {
+  "rtn4_gsm8k": {
+   "median_fp16": 293.0,
+   "median_quant": 299.0,
+   "mean_ratio": 1.1618976696964762,
+   "hit_limit_fp16": 19,
+   "hit_limit_quant": 111
+  },
+  "gptq4_gsm8k": {
+   "median_fp16": 293.0,
+   "median_quant": 287.0,
+   "mean_ratio": 1.0887679944831286,
+   "hit_limit_fp16": 19,
+   "hit_limit_quant": 95
+  },
+  "rtn4_triviaqa": {
+   "median_fp16": 15.0,
+   "median_quant": 11.0,
+   "mean_ratio": 0.8199962317842502,
+   "hit_limit_fp16": 560,
+   "hit_limit_quant": 386
+  },
+  "gptq4_triviaqa": {
+   "median_fp16": 15.0,
+   "median_quant": 16.0,
+   "mean_ratio": 1.1146252249559834,
+   "hit_limit_fp16": 560,
+   "hit_limit_quant": 849
+  }
+ },
+ "rule_labels": {
+  "gptq4_gsm8k": {
+   "judge": 289,
+   "degeneration": 33
+  },
+  "rtn4_gsm8k": {
+   "judge": 292,
+   "degeneration": 47
+  },
+  "gptq4_triviaqa": {
+   "judge": 646,
+   "no_answer": 6
+  },
+  "rtn4_triviaqa": {
+   "judge": 857,
+   "no_answer": 18
+  }
+ },
+ "models": [
+  "fp16",
+  "rtn4",
+  "gptq4"
+ ]
+}

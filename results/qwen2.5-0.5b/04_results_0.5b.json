@@ -1,0 +1,123 @@
+{
+ "judge": {
+  "triviaqa": "gemini:gemini-3.5-flash-lite",
+  "gsm8k": "groq:openai/gpt-oss-120b"
+ },
+ "tasks": [
+  "triviaqa",
+  "gsm8k"
+ ],
+ "kappa": {},
+ "rq2": {
+  "triviaqa": {
+   "counts": {
+    "degeneration": {
+     "gptq4": 24,
+     "rtn4": 12
+    },
+    "near_miss": {
+     "gptq4": 308,
+     "rtn4": 397
+    },
+    "no_answer": {
+     "gptq4": 25,
+     "rtn4": 49
+    },
+    "scoring_issue": {
+     "gptq4": 44,
+     "rtn4": 44
+    },
+    "unrelated": {
+     "gptq4": 251,
+     "rtn4": 373
+    }
+   },
+   "percent": {
+    "degeneration": {
+     "gptq4": 3.7,
+     "rtn4": 1.4
+    },
+    "near_miss": {
+     "gptq4": 47.2,
+     "rtn4": 45.4
+    },
+    "no_answer": {
+     "gptq4": 3.8,
+     "rtn4": 5.6
+    },
+    "scoring_issue": {
+     "gptq4": 6.7,
+     "rtn4": 5.0
+    },
+    "unrelated": {
+     "gptq4": 38.5,
+     "rtn4": 42.6
+    }
+   },
+   "missing": 0,
+   "chi2": 12.616778272383662,
+   "p": 0.005543083942113001,
+   "dof": 3,
+   "min_expected": 15.210562890896457
+  },
+  "gsm8k": {
+   "counts": {
+    "conceptual": {
+     "gptq4": 216,
+     "rtn4": 226
+    },
+    "degeneration": {
+     "gptq4": 33,
+     "rtn4": 47
+    },
+    "execution": {
+     "gptq4": 42,
+     "rtn4": 42
+    },
+    "method": {
+     "gptq4": 18,
+     "rtn4": 16
+    },
+    "reasoning": {
+     "gptq4": 13,
+     "rtn4": 7
+    },
+    "scoring_issue": {
+     "gptq4": 0,
+     "rtn4": 1
+    }
+   },
+   "percent": {
+    "conceptual": {
+     "gptq4": 67.1,
+     "rtn4": 66.7
+    },
+    "degeneration": {
+     "gptq4": 10.2,
+     "rtn4": 13.9
+    },
+    "execution": {
+     "gptq4": 13.0,
+     "rtn4": 12.4
+    },
+    "method": {
+     "gptq4": 5.6,
+     "rtn4": 4.7
+    },
+    "reasoning": {
+     "gptq4": 4.0,
+     "rtn4": 2.1
+    },
+    "scoring_issue": {
+     "gptq4": 0.0,
+     "rtn4": 0.3
+    }
+   },
+   "missing": 0,
+   "chi2": 4.208485921530157,
+   "p": 0.3785250265053611,
+   "dof": 4,
+   "min_expected": 9.757575757575758
+  }
+ }
+}
